@@ -1,0 +1,352 @@
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+
+<form-validation>
+	<global>
+		<constant>
+			<constant-name>zip</constant-name> 
+			<constant-value>^\d{5}\d*$</constant-value>
+		</constant>
+		<constant>
+			<constant-name>score</constant-name>
+			<constant-value>^(([0-9]{1,2})|(([0-9]{1,2})(\.)([0-9]{1,2})))$</constant-value>
+		</constant>
+		<constant>
+			<constant-name>10</constant-name>
+			<constant-value>^(([1][0])|([1][0][.][0])|(([0-9])((\.)([0-9]{1,2}))?))$</constant-value>
+		</constant>
+		<constant>
+			<constant-name>35</constant-name>
+			<constant-value>^(([3][5])|([3][5][.][0])|((([3][0-4])|([1-2]?[0-9]))((\.)([0-9]{1,2}))?))$</constant-value>
+		</constant>
+		<constant>
+			<constant-name>15</constant-name>
+			<constant-value>^(([1][5])|([1][5][.][0])|((([1][0-4])|([0-9]))((\.)([0-9]{1,2}))?))$</constant-value>
+		</constant>		
+		
+		<constant>
+			<constant-name>40</constant-name>
+			<constant-value>^(([4][0])|([4][0][.][0])|(([0-3]?[0-9])((\.)([0-9]{1,2}))?))$</constant-value>
+		</constant>
+	</global>
+	<formset>
+
+		<form name="/editTeaProperty">
+			<field property="teacherEmail" depends="required,email" >
+				<msg name="required" key="error.isEmpty"/>
+				<arg0 key="updateTea.email.display"/>
+			</field>
+			<field property="fieldName" depends="required" >
+				<msg name="required" key="error.noChoice"/>
+				<arg0 key="sub.field"/>
+			</field>
+			<field property="teacherPhone" depends="required,mask" >
+				<msg name="mask" key="error.phone"/>
+				<arg0 key="updateTea.phone.display"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^\d{8,11}$</var-value>
+				</var>
+			</field>
+		</form>
+		
+		<form name="/editTeaPassword">
+			<field property="teacherPassword" depends="required"  >
+				<arg0 key="updatePSW.original.display"/>
+			</field>
+			<field property="newPSW" depends="required,minlength" >
+				<msg name="minlength" key="error.isShort"/>
+				<arg0 key="updatePSW.newPSW.display"/>
+				<var>
+					<var-name>minlength</var-name>
+					<var-value>6</var-value>
+				</var>
+			</field>
+			<field property="confirmPSW" depends="validwhen" >
+				<msg name="validwhen" key="error.notMatch"/>
+				<arg0 key="updatePSW.confirm.display"/>
+				<var>
+					<var-name>test</var-name>
+					<var-value>((newPSW!=null)and(*this*==newPSW))</var-value>
+				</var>
+
+			</field>
+			
+			
+		</form>
+
+
+
+
+		<form name="subjectForm">
+			<field property="subject" depends="required">
+				<arg0 key="sub.subject"/>
+			</field>
+			<field property="difficulty" depends="required,mask">
+				<msg name="mask" key="error.noChoice"/>
+				<arg0 key="sub.difficulty"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^\w+$</var-value>
+				</var>
+			</field>
+			<field property="typeName" depends="required">
+				<msg name="required" key="error.noChoice"/>
+				<arg0 key="sub.type"/>
+			</field>
+			<field property="fieldName" depends="required">
+				<msg name="required" key="error.noChoice"/>
+				<arg0 key="sub.field"/>
+			</field>			
+			<field property="sourceName" depends="required">
+				<msg name="required" key="error.noChoice"/>
+				<arg0 key="sub.source"/>
+			</field>		
+			<field property="propertyName" depends="required">
+				<msg name="required" key="error.noChoice"/>
+				<arg0 key="sub.property"/>
+			</field>	
+			<field property="excellentTag" depends="required">
+				<msg name="required" key="error.noChoice"/>
+				<arg0 key="sub.excellentTag"/>
+			</field>			
+			<field property="introduction" depends="validwhen,maxlength">
+				<msg name="validwhen" key="error.noFill"/>
+				<arg0 key="sub.introduction"/>
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+				<var> 
+					<var-name>test</var-name> 
+					<var-value>((difficulty!="A")or(*this* != null))</var-value> 
+				</var> 
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>180</var-value>
+				</var>
+			</field>			
+		</form>
+
+		<form name="requirementForm">
+		
+			<field property="requirement.content" depends="required">
+				<msg name="required" key="error.noChoice"/>
+				<arg0 key="req.content"/>
+			</field>
+			<field property="requirement.information" depends="required">
+				<msg name="required" key="error.noChoice"/>
+				<arg0 key="req.information"/>
+			</field>
+			<field property="requirement.specification" depends="required">
+				<msg name="required" key="error.noChoice"/>
+				<arg0 key="req.specification"/>
+			</field>
+			<field property="requirement.charts" depends="required">
+				<msg name="required" key="error.noChoice"/>
+				<arg0 key="req.charts"/>
+			</field>
+			<field property="requirement.schedule" depends="required">
+				<msg name="required" key="error.noChoice"/>
+				<arg0 key="req.schedule"/>
+			</field>
+			<field property="requirement.reference" depends="required">
+				<msg name="required" key="error.noChoice"/>
+				<arg0 key="req.reference"/>
+			</field>
+		</form>
+
+		<form name="stuIdForm">
+			<field property="studentId" depends="required,mask">
+				<msg name="required" key="error.isEmpty"/>
+				<msg name="mask" key="error.IdType"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^(\d{10})$</var-value>
+				</var>
+			</field>
+		</form>
+
+		<form name="/py">
+			<field property="argumentation" depends="required,mask">
+				<msg name="mask" key="error.score.illegal"/> 
+				<arg0 key="score.argumentation.display"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${15}</var-value>
+				</var>
+			</field>	
+			
+			<field property="achievement" depends="required,mask">
+				<msg name="mask" key="error.score.illegal"/> 
+				<arg0 key="score.achievement.display"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${15}</var-value>
+				</var>
+			</field>
+			
+			<field property="translating" depends="required,mask">
+				<msg name="mask" key="error.score.illegal"/>
+				<arg0 key="score.translating.display"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${10}</var-value>
+				</var>				
+			</field>	
+			
+			<field property="design" depends="required,mask">
+				<msg name="mask" key="error.score.illegal"/>
+				<arg0 key="score.design.display"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${40}</var-value>
+				</var>				
+			</field>			
+			
+			<field property="designSpecification" depends="required,mask">
+				<msg name="mask" key="error.score.illegal"/>
+				<arg0 key="score.designSpecification.display"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${10}</var-value>
+				</var>				
+			</field>			
+			
+			<field property="innovation" depends="required,mask">
+				<msg name="mask" key="error.score.illegal"/>
+				<arg0 key="score.innovation.display"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${10}</var-value>
+				</var>				
+			</field>			
+			
+			<field property="comment" depends="required">
+				<arg key="score.comment.display"/>
+			</field>			
+		</form>
+		
+		<form name="/db">
+			<field property="achievement" depends="required,mask">
+				<msg name="mask" key="error.score.illegal"/>
+				<arg0 key="score.achievementInTableDB.display"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${10}</var-value>
+				</var>
+			</field>
+			<field property="workLoad" depends="required,mask">
+				<msg name="mask" key="error.score.illegal"/>
+				<arg0 key="score.workload.display"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${10}</var-value>
+				</var>
+			</field>
+			<field property="innovation" depends="required,mask">
+				<msg name="mask" key="error.score.illegal"/>
+				<arg0 key="score.innovation.display"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${10}</var-value>
+				</var>
+			</field>
+			<field property="verbalReport" depends="required,mask">
+				<msg name="mask" key="error.score.illegal"/>
+				<arg0 key="score.verbalReport.display"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${35}</var-value>
+				</var>
+			</field>		
+			<field property="reply" depends="required,mask">
+				<msg name="mask" key="error.score.illegal"/>
+				<arg0 key="score.reply.display"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${35}</var-value>
+				</var>
+			</field>
+			<field property="comment" depends="required">
+				<arg0 key="score.comment.display"/>
+			</field>
+		</form>
+		
+		<form name="/zdScore">
+			<field property="workLoad" depends="required,mask">
+				<msg name="mask" key="error.score.illegal"/>
+				<arg0 key="score.workload.display"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${15}</var-value>
+				</var>
+			</field>
+			<field property="argumentation" depends="required,mask">
+				<msg name="mask" key="error.score.illegal"/>
+				<arg0 key="score.argumentation.display"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${15}</var-value>
+				</var>
+			</field>
+			<field property="translating" depends="required,mask">
+				<msg name="mask" key="error.score.illegal"/>
+				<arg0 key="score.translating.display"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${10}</var-value>
+				</var>
+			</field>
+			<field property="design" depends="required,mask">
+				<msg name="mask" key="error.score.illegal"/>
+				<arg0 key="score.design.display"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${40}</var-value>
+				</var>
+			</field>
+			<field property="designSpecification" depends="required,mask">
+				<msg name="mask" key="error.score.illegal"/>
+				<arg0 key="score.designSpecification.display"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${10}</var-value>
+				</var>
+			</field>
+			<field property="innovation" depends="required,mask">
+				<msg name="mask" key="error.score.illegal"/>
+				<arg0 key="score.innovation.display"/>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>${10}</var-value>
+				</var>
+			</field>
+			<field property="comment" depends="required">
+				<arg0 key="score.comment.display"/>
+			</field>
+			<field property="tag" depends="required">
+				<msg name="required" key="error.score.DBtag"/>
+				<arg0 key="score.tag.display"/>
+			</field>			
+		</form>
+		
+		<form name="psForm">
+			<field property="grade" depends="required">
+				<msg name="required" key="error.score.PStag"/>
+			</field>
+		</form>
+		
+		<form name="sendMailForm">
+			<field property="email" depends="required,email">
+				<arg0 key="updateTea.email.display"/>
+			</field>
+			<field property="content" depends="required">
+				<msg name="required" key="error.isEmpty"/>
+			</field>
+		</form>
+
+		
+		
+		
+	</formset>
+
+</form-validation>

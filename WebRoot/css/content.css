@@ -1,0 +1,79 @@
+/*
+Content about:  news / article / resource
+*/
+
+#contentcontent {
+	background: White;
+	margin: 10px;
+	line-height: 150%;
+}
+
+#contentcontent .title {
+	margin: 20px auto;
+}
+#contentcontent .help {
+	margin: 0 auto;
+	padding: 0 20px;
+	border: thin solid ButtonFace;
+	width: 50%;
+}
+#contentcontent .summary {
+	width: 100%;
+}
+#contentcontent .left {
+	float: left;
+	width: 40%;
+	margin: 0 0 0 6px;
+}
+#contentcontent .center {
+	float: left;
+	width: 38%;
+	margin: 0 0 0 14px;
+}
+#contentcontent .right {
+	float: right;
+	width: 18%;
+}
+
+#contentcontent #text {
+	clear: both;
+	width: 100%;
+	line-height: 150%;
+	padding-top: 20px;
+	text-align: left;
+}
+
+#contentcontent .summary h4 {
+	margin: 0;
+	padding: 10px 0;
+	border: 0;
+	background: 0;
+	color: black;
+}
+
+#contentcontent pre {
+	font-size: small;
+	width: 90%;
+	margin: 0 auto;
+	padding: 10px;
+	background: #F6F6F4;
+	margin: 5px auto;
+	padding: 5px;
+	border: 1px dashed #888888;
+	border-left:4px solid #888888;
+}
+
+
+#contentcontent .vote {
+	margin: 20px auto;
+}
+
+
+#review {
+	margin: 20px 5px 10px 5px;
+}
+
+#review_title {
+	background: #D3E5FA;
+	font: bold small;
+}

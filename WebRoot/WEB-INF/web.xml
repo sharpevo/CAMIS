@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee   http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+	<filter>
+		<filter-name>Authentication</filter-name>
+		<filter-class>org.chd.AuthenticationFilter</filter-class>
+		<init-param>
+			<param-name>onError</param-name>
+			<param-value>/error.jsp</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>Authentication</filter-name>
+		<url-pattern>/stu/*</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>Authentication</filter-name>
+		<url-pattern>/adm/*</url-pattern>
+	</filter-mapping>
+	
+  	<filter-mapping>
+		<filter-name>Authentication</filter-name>
+		<url-pattern>/tea/*</url-pattern>
+	</filter-mapping>
+   
+   <filter-mapping>
+		<filter-name>Authentication</filter-name>
+		<url-pattern>/jwy/*</url-pattern>
+	</filter-mapping>
+	
+	    <filter>
+        <filter-name>SetCharsetEncodingFilter</filter-name>
+        <filter-class>org.chd.SetCharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>GBK</param-value>
+        </init-param>
+    </filter>
+
+
+	<filter-mapping>
+        <filter-name>SetCharsetEncodingFilter</filter-name>
+		<url-pattern>/tea/*</url-pattern>
+    </filter-mapping>
+	
+	<filter>
+    <filter-name>sitemesh</filter-name>
+    <filter-class>com.opensymphony.module.sitemesh.filter.PageFilter</filter-class>
+</filter>
+
+<filter-mapping>
+    <filter-name>sitemesh</filter-name>
+    <url-pattern>/tea/*</url-pattern>
+</filter-mapping>
+	
+<filter>
+	<filter-name>ResponseOverrideFilter</filter-name>
+	<filter-class>org.displaytag.filter.ResponseOverrideFilter</filter-class>
+</filter>
+<filter-mapping>
+	<filter-name>ResponseOverrideFilter</filter-name>
+	<url-pattern>*.do</url-pattern>
+</filter-mapping>
+<filter-mapping>
+	<filter-name>ResponseOverrideFilter</filter-name>
+	<url-pattern>*.jsp</url-pattern>
+</filter-mapping>
+
+	
+	
+	<servlet>
+		<servlet-name>action</servlet-name>
+		<servlet-class>
+			org.apache.struts.action.ActionServlet
+		</servlet-class>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>/WEB-INF/struts-config.xml</param-value>
+		</init-param>
+		<init-param>
+		  <param-name>config/tea</param-name> 
+		  <param-value>/WEB-INF/struts-config-tea.xml</param-value> 
+		  </init-param>
+		<init-param>
+			<param-name>application</param-name>
+			<param-value>
+				org.chd.struts.ApplicationResources
+			</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>3</param-value>
+		</init-param>
+		<init-param>
+			<param-name>detail</param-name>
+			<param-value>3</param-value>
+		</init-param>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+<jsp-config>
+	<taglib>
+		<taglib-uri>http://displaytag.sf.net</taglib-uri>
+		<taglib-location>/WEB-INF/displaytag-12.tld</taglib-location>
+	</taglib>
+</jsp-config>
+<!-- 
+<error-page>
+    <error-code>500</error-code> 
+    <location>/tea/exception.jsp</location> 
+</error-page>
+ -->
+
+
+
+
+
+
+
+	<servlet-mapping>
+		<servlet-name>action</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+
+	<session-config>
+		<session-timeout>60</session-timeout>
+	</session-config>
+
+
+</web-app>
+

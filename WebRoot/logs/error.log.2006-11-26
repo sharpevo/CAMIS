@@ -1,0 +1,520 @@
+2006-11-26 21:38:24  [ http-8080-Processor23:86609 ] - [ ERROR ]  Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused: connect
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused: connect
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:156)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:276)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2641)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1531)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:266)
+	at java.sql.DriverManager.getConnection(DriverManager.java:525)
+	at java.sql.DriverManager.getConnection(DriverManager.java:140)
+	at org.hibernate.connection.DriverManagerConnectionProvider.getConnection(DriverManagerConnectionProvider.java:110)
+	at org.hibernate.jdbc.ConnectionManager.openConnection(ConnectionManager.java:298)
+	at org.hibernate.jdbc.ConnectionManager.getConnection(ConnectionManager.java:110)
+	at org.hibernate.jdbc.AbstractBatcher.prepareQueryStatement(AbstractBatcher.java:88)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1162)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:390)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:218)
+	at org.hibernate.loader.Loader.doList(Loader.java:1593)
+	at org.hibernate.loader.Loader.list(Loader.java:1577)
+	at org.hibernate.loader.criteria.CriteriaLoader.list(CriteriaLoader.java:111)
+	at org.hibernate.impl.SessionImpl.list(SessionImpl.java:1322)
+	at org.hibernate.impl.CriteriaImpl.list(CriteriaImpl.java:300)
+	at org.springframework.orm.hibernate3.HibernateTemplate$38.doInHibernate(HibernateTemplate.java:1012)
+	at org.springframework.orm.hibernate3.HibernateTemplate.execute(HibernateTemplate.java:366)
+	at org.springframework.orm.hibernate3.HibernateTemplate.findByExample(HibernateTemplate.java:1001)
+	at org.springframework.orm.hibernate3.HibernateTemplate.findByExample(HibernateTemplate.java:994)
+	at com.bbs.entity.SortinfoDAO.findByExample(SortinfoDAO.java:69)
+	at com.eyeson.struts.action.SortListAction.execute(SortListAction.java:64)
+	at org.apache.struts.action.RequestProcessor.processActionPerform(RequestProcessor.java:419)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:224)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1194)
+	at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:414)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:689)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:664)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:595)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 0 ms ago.
+2006-11-26 21:38:24  [ http-8080-Processor23:86625 ] - [ ERROR ]  find by example failed
+org.springframework.jdbc.UncategorizedSQLException: Hibernate operation: Cannot open connection; uncategorized SQLException for SQL [???]; SQL state [08S01]; error code [0]; Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused: connect
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused: connect
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:156)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:276)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2641)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1531)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:266)
+	at java.sql.DriverManager.getConnection(DriverManager.java:525)
+	at java.sql.DriverManager.getConnection(DriverManager.java:140)
+	at org.hibernate.connection.DriverManagerConnectionProvider.getConnection(DriverManagerConnectionProvider.java:110)
+	at org.hibernate.jdbc.ConnectionManager.openConnection(ConnectionManager.java:298)
+	at org.hibernate.jdbc.ConnectionManager.getConnection(ConnectionManager.java:110)
+	at org.hibernate.jdbc.AbstractBatcher.prepareQueryStatement(AbstractBatcher.java:88)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1162)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:390)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:218)
+	at org.hibernate.loader.Loader.doList(Loader.java:1593)
+	at org.hibernate.loader.Loader.list(Loader.java:1577)
+	at org.hibernate.loader.criteria.CriteriaLoader.list(CriteriaLoader.java:111)
+	at org.hibernate.impl.SessionImpl.list(SessionImpl.java:1322)
+	at org.hibernate.impl.CriteriaImpl.list(CriteriaImpl.java:300)
+	at org.springframework.orm.hibernate3.HibernateTemplate$38.doInHibernate(HibernateTemplate.java:1012)
+	at org.springframework.orm.hibernate3.HibernateTemplate.execute(HibernateTemplate.java:366)
+	at org.springframework.orm.hibernate3.HibernateTemplate.findByExample(HibernateTemplate.java:1001)
+	at org.springframework.orm.hibernate3.HibernateTemplate.findByExample(HibernateTemplate.java:994)
+	at com.bbs.entity.SortinfoDAO.findByExample(SortinfoDAO.java:69)
+	at com.eyeson.struts.action.SortListAction.execute(SortListAction.java:64)
+	at org.apache.struts.action.RequestProcessor.processActionPerform(RequestProcessor.java:419)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:224)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1194)
+	at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:414)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:689)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:664)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:595)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 0 ms ago.; nested exception is com.mysql.jdbc.CommunicationsException: Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused: connect
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused: connect
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:156)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:276)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2641)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1531)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:266)
+	at java.sql.DriverManager.getConnection(DriverManager.java:525)
+	at java.sql.DriverManager.getConnection(DriverManager.java:140)
+	at org.hibernate.connection.DriverManagerConnectionProvider.getConnection(DriverManagerConnectionProvider.java:110)
+	at org.hibernate.jdbc.ConnectionManager.openConnection(ConnectionManager.java:298)
+	at org.hibernate.jdbc.ConnectionManager.getConnection(ConnectionManager.java:110)
+	at org.hibernate.jdbc.AbstractBatcher.prepareQueryStatement(AbstractBatcher.java:88)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1162)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:390)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:218)
+	at org.hibernate.loader.Loader.doList(Loader.java:1593)
+	at org.hibernate.loader.Loader.list(Loader.java:1577)
+	at org.hibernate.loader.criteria.CriteriaLoader.list(CriteriaLoader.java:111)
+	at org.hibernate.impl.SessionImpl.list(SessionImpl.java:1322)
+	at org.hibernate.impl.CriteriaImpl.list(CriteriaImpl.java:300)
+	at org.springframework.orm.hibernate3.HibernateTemplate$38.doInHibernate(HibernateTemplate.java:1012)
+	at org.springframework.orm.hibernate3.HibernateTemplate.execute(HibernateTemplate.java:366)
+	at org.springframework.orm.hibernate3.HibernateTemplate.findByExample(HibernateTemplate.java:1001)
+	at org.springframework.orm.hibernate3.HibernateTemplate.findByExample(HibernateTemplate.java:994)
+	at com.bbs.entity.SortinfoDAO.findByExample(SortinfoDAO.java:69)
+	at com.eyeson.struts.action.SortListAction.execute(SortListAction.java:64)
+	at org.apache.struts.action.RequestProcessor.processActionPerform(RequestProcessor.java:419)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:224)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1194)
+	at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:414)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:689)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:664)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:595)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 0 ms ago.
+com.mysql.jdbc.CommunicationsException: Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused: connect
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused: connect
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:156)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:276)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2641)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1531)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:266)
+	at java.sql.DriverManager.getConnection(DriverManager.java:525)
+	at java.sql.DriverManager.getConnection(DriverManager.java:140)
+	at org.hibernate.connection.DriverManagerConnectionProvider.getConnection(DriverManagerConnectionProvider.java:110)
+	at org.hibernate.jdbc.ConnectionManager.openConnection(ConnectionManager.java:298)
+	at org.hibernate.jdbc.ConnectionManager.getConnection(ConnectionManager.java:110)
+	at org.hibernate.jdbc.AbstractBatcher.prepareQueryStatement(AbstractBatcher.java:88)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1162)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:390)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:218)
+	at org.hibernate.loader.Loader.doList(Loader.java:1593)
+	at org.hibernate.loader.Loader.list(Loader.java:1577)
+	at org.hibernate.loader.criteria.CriteriaLoader.list(CriteriaLoader.java:111)
+	at org.hibernate.impl.SessionImpl.list(SessionImpl.java:1322)
+	at org.hibernate.impl.CriteriaImpl.list(CriteriaImpl.java:300)
+	at org.springframework.orm.hibernate3.HibernateTemplate$38.doInHibernate(HibernateTemplate.java:1012)
+	at org.springframework.orm.hibernate3.HibernateTemplate.execute(HibernateTemplate.java:366)
+	at org.springframework.orm.hibernate3.HibernateTemplate.findByExample(HibernateTemplate.java:1001)
+	at org.springframework.orm.hibernate3.HibernateTemplate.findByExample(HibernateTemplate.java:994)
+	at com.bbs.entity.SortinfoDAO.findByExample(SortinfoDAO.java:69)
+	at com.eyeson.struts.action.SortListAction.execute(SortListAction.java:64)
+	at org.apache.struts.action.RequestProcessor.processActionPerform(RequestProcessor.java:419)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:224)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1194)
+	at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:414)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:689)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:664)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:595)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 0 ms ago.
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2707)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1531)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:266)
+	at java.sql.DriverManager.getConnection(DriverManager.java:525)
+	at java.sql.DriverManager.getConnection(DriverManager.java:140)
+	at org.hibernate.connection.DriverManagerConnectionProvider.getConnection(DriverManagerConnectionProvider.java:110)
+	at org.hibernate.jdbc.ConnectionManager.openConnection(ConnectionManager.java:298)
+	at org.hibernate.jdbc.ConnectionManager.getConnection(ConnectionManager.java:110)
+	at org.hibernate.jdbc.AbstractBatcher.prepareQueryStatement(AbstractBatcher.java:88)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1162)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:390)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:218)
+	at org.hibernate.loader.Loader.doList(Loader.java:1593)
+	at org.hibernate.loader.Loader.list(Loader.java:1577)
+	at org.hibernate.loader.criteria.CriteriaLoader.list(CriteriaLoader.java:111)
+	at org.hibernate.impl.SessionImpl.list(SessionImpl.java:1322)
+	at org.hibernate.impl.CriteriaImpl.list(CriteriaImpl.java:300)
+	at org.springframework.orm.hibernate3.HibernateTemplate$38.doInHibernate(HibernateTemplate.java:1012)
+	at org.springframework.orm.hibernate3.HibernateTemplate.execute(HibernateTemplate.java:366)
+	at org.springframework.orm.hibernate3.HibernateTemplate.findByExample(HibernateTemplate.java:1001)
+	at org.springframework.orm.hibernate3.HibernateTemplate.findByExample(HibernateTemplate.java:994)
+	at com.bbs.entity.SortinfoDAO.findByExample(SortinfoDAO.java:69)
+	at com.eyeson.struts.action.SortListAction.execute(SortListAction.java:64)
+	at org.apache.struts.action.RequestProcessor.processActionPerform(RequestProcessor.java:419)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:224)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1194)
+	at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:414)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:689)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:664)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:595)
+2006-11-26 21:38:25  [ http-8080-Processor23:86781 ] - [ ERROR ]  Servlet.service() for servlet action threw exception
+org.springframework.jdbc.UncategorizedSQLException: Hibernate operation: Cannot open connection; uncategorized SQLException for SQL [???]; SQL state [08S01]; error code [0]; Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused: connect
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused: connect
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:156)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:276)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2641)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1531)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:266)
+	at java.sql.DriverManager.getConnection(DriverManager.java:525)
+	at java.sql.DriverManager.getConnection(DriverManager.java:140)
+	at org.hibernate.connection.DriverManagerConnectionProvider.getConnection(DriverManagerConnectionProvider.java:110)
+	at org.hibernate.jdbc.ConnectionManager.openConnection(ConnectionManager.java:298)
+	at org.hibernate.jdbc.ConnectionManager.getConnection(ConnectionManager.java:110)
+	at org.hibernate.jdbc.AbstractBatcher.prepareQueryStatement(AbstractBatcher.java:88)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1162)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:390)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:218)
+	at org.hibernate.loader.Loader.doList(Loader.java:1593)
+	at org.hibernate.loader.Loader.list(Loader.java:1577)
+	at org.hibernate.loader.criteria.CriteriaLoader.list(CriteriaLoader.java:111)
+	at org.hibernate.impl.SessionImpl.list(SessionImpl.java:1322)
+	at org.hibernate.impl.CriteriaImpl.list(CriteriaImpl.java:300)
+	at org.springframework.orm.hibernate3.HibernateTemplate$38.doInHibernate(HibernateTemplate.java:1012)
+	at org.springframework.orm.hibernate3.HibernateTemplate.execute(HibernateTemplate.java:366)
+	at org.springframework.orm.hibernate3.HibernateTemplate.findByExample(HibernateTemplate.java:1001)
+	at org.springframework.orm.hibernate3.HibernateTemplate.findByExample(HibernateTemplate.java:994)
+	at com.bbs.entity.SortinfoDAO.findByExample(SortinfoDAO.java:69)
+	at com.eyeson.struts.action.SortListAction.execute(SortListAction.java:64)
+	at org.apache.struts.action.RequestProcessor.processActionPerform(RequestProcessor.java:419)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:224)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1194)
+	at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:414)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:689)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:664)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:595)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 0 ms ago.; nested exception is com.mysql.jdbc.CommunicationsException: Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused: connect
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused: connect
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:156)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:276)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2641)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1531)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:266)
+	at java.sql.DriverManager.getConnection(DriverManager.java:525)
+	at java.sql.DriverManager.getConnection(DriverManager.java:140)
+	at org.hibernate.connection.DriverManagerConnectionProvider.getConnection(DriverManagerConnectionProvider.java:110)
+	at org.hibernate.jdbc.ConnectionManager.openConnection(ConnectionManager.java:298)
+	at org.hibernate.jdbc.ConnectionManager.getConnection(ConnectionManager.java:110)
+	at org.hibernate.jdbc.AbstractBatcher.prepareQueryStatement(AbstractBatcher.java:88)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1162)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:390)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:218)
+	at org.hibernate.loader.Loader.doList(Loader.java:1593)
+	at org.hibernate.loader.Loader.list(Loader.java:1577)
+	at org.hibernate.loader.criteria.CriteriaLoader.list(CriteriaLoader.java:111)
+	at org.hibernate.impl.SessionImpl.list(SessionImpl.java:1322)
+	at org.hibernate.impl.CriteriaImpl.list(CriteriaImpl.java:300)
+	at org.springframework.orm.hibernate3.HibernateTemplate$38.doInHibernate(HibernateTemplate.java:1012)
+	at org.springframework.orm.hibernate3.HibernateTemplate.execute(HibernateTemplate.java:366)
+	at org.springframework.orm.hibernate3.HibernateTemplate.findByExample(HibernateTemplate.java:1001)
+	at org.springframework.orm.hibernate3.HibernateTemplate.findByExample(HibernateTemplate.java:994)
+	at com.bbs.entity.SortinfoDAO.findByExample(SortinfoDAO.java:69)
+	at com.eyeson.struts.action.SortListAction.execute(SortListAction.java:64)
+	at org.apache.struts.action.RequestProcessor.processActionPerform(RequestProcessor.java:419)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:224)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1194)
+	at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:414)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:689)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:664)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:595)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 0 ms ago.
+com.mysql.jdbc.CommunicationsException: Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.SocketException
+MESSAGE: java.net.ConnectException: Connection refused: connect
+
+STACKTRACE:
+
+java.net.SocketException: java.net.ConnectException: Connection refused: connect
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:156)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:276)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2641)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1531)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:266)
+	at java.sql.DriverManager.getConnection(DriverManager.java:525)
+	at java.sql.DriverManager.getConnection(DriverManager.java:140)
+	at org.hibernate.connection.DriverManagerConnectionProvider.getConnection(DriverManagerConnectionProvider.java:110)
+	at org.hibernate.jdbc.ConnectionManager.openConnection(ConnectionManager.java:298)
+	at org.hibernate.jdbc.ConnectionManager.getConnection(ConnectionManager.java:110)
+	at org.hibernate.jdbc.AbstractBatcher.prepareQueryStatement(AbstractBatcher.java:88)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1162)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:390)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:218)
+	at org.hibernate.loader.Loader.doList(Loader.java:1593)
+	at org.hibernate.loader.Loader.list(Loader.java:1577)
+	at org.hibernate.loader.criteria.CriteriaLoader.list(CriteriaLoader.java:111)
+	at org.hibernate.impl.SessionImpl.list(SessionImpl.java:1322)
+	at org.hibernate.impl.CriteriaImpl.list(CriteriaImpl.java:300)
+	at org.springframework.orm.hibernate3.HibernateTemplate$38.doInHibernate(HibernateTemplate.java:1012)
+	at org.springframework.orm.hibernate3.HibernateTemplate.execute(HibernateTemplate.java:366)
+	at org.springframework.orm.hibernate3.HibernateTemplate.findByExample(HibernateTemplate.java:1001)
+	at org.springframework.orm.hibernate3.HibernateTemplate.findByExample(HibernateTemplate.java:994)
+	at com.bbs.entity.SortinfoDAO.findByExample(SortinfoDAO.java:69)
+	at com.eyeson.struts.action.SortListAction.execute(SortListAction.java:64)
+	at org.apache.struts.action.RequestProcessor.processActionPerform(RequestProcessor.java:419)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:224)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1194)
+	at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:414)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:689)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:664)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:595)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 0 ms ago.
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2707)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1531)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:266)
+	at java.sql.DriverManager.getConnection(DriverManager.java:525)
+	at java.sql.DriverManager.getConnection(DriverManager.java:140)
+	at org.hibernate.connection.DriverManagerConnectionProvider.getConnection(DriverManagerConnectionProvider.java:110)
+	at org.hibernate.jdbc.ConnectionManager.openConnection(ConnectionManager.java:298)
+	at org.hibernate.jdbc.ConnectionManager.getConnection(ConnectionManager.java:110)
+	at org.hibernate.jdbc.AbstractBatcher.prepareQueryStatement(AbstractBatcher.java:88)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1162)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:390)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:218)
+	at org.hibernate.loader.Loader.doList(Loader.java:1593)
+	at org.hibernate.loader.Loader.list(Loader.java:1577)
+	at org.hibernate.loader.criteria.CriteriaLoader.list(CriteriaLoader.java:111)
+	at org.hibernate.impl.SessionImpl.list(SessionImpl.java:1322)
+	at org.hibernate.impl.CriteriaImpl.list(CriteriaImpl.java:300)
+	at org.springframework.orm.hibernate3.HibernateTemplate$38.doInHibernate(HibernateTemplate.java:1012)
+	at org.springframework.orm.hibernate3.HibernateTemplate.execute(HibernateTemplate.java:366)
+	at org.springframework.orm.hibernate3.HibernateTemplate.findByExample(HibernateTemplate.java:1001)
+	at org.springframework.orm.hibernate3.HibernateTemplate.findByExample(HibernateTemplate.java:994)
+	at com.bbs.entity.SortinfoDAO.findByExample(SortinfoDAO.java:69)
+	at com.eyeson.struts.action.SortListAction.execute(SortListAction.java:64)
+	at org.apache.struts.action.RequestProcessor.processActionPerform(RequestProcessor.java:419)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:224)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1194)
+	at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:414)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:689)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:252)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:173)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:178)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:126)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:105)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:107)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:148)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:869)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:664)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:527)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:80)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:684)
+	at java.lang.Thread.run(Thread.java:595)

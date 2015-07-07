@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+>
+    <class
+        name="org.chd.entity.PropertyInfo"
+        table="Property"
+    >
+
+        <id
+            name="propertyId"
+            column="PropertyId"
+            type="java.lang.Integer"
+        >
+            <generator class="assigned">
+              <!--  
+                  To add non XDoclet generator parameters, create a file named 
+                  hibernate-generator-params-PropertyInfo.xml 
+                  containing the additional parameters and place it in your merge dir. 
+              --> 
+            </generator>
+        </id>
+
+        <property
+            name="property"
+            type="java.lang.String"
+            column="Property"
+            length="20"
+        />
+
+    </class>
+
+</hibernate-mapping>

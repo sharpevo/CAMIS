@@ -1,0 +1,43 @@
+/*
+nav - globalnav / topbar / footnav 
+*/
+
+#globalnav {
+	background-color: #F6F6F4;
+	margin: 0 auto 0 auto;
+	padding: 3px 0 3px 0;
+	border-bottom: 3px solid #BDCEBD;
+}
+
+#globalnav li {
+	list-style: none;
+	display: inline;
+	padding: 0 2px 0 2px;	
+	}
+	
+#topbar {
+	background: url(../i/bg_dian.gif) repeat-x bottom;
+	margin: 0 auto 0 auto;
+}
+
+#topbar table {
+	background: transparent;
+}
+
+#topbar td {
+	background: transparent;
+}
+
+#footernav {
+	background: #0c8dc7;	
+	height: 24px;
+	text-align: center;
+	padding-top: 5px;
+	background: #DEEFDE;
+	border-top: 3px solid #BDCEBD;
+}
+
+#footernav a,#footernav a:link,#footernav a:visited,#footernav a:hover{
+   color: #108301;
+	border-bottom: 1px #108301;
+}

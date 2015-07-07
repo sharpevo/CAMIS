@@ -1,0 +1,288 @@
+<html><head>
+<script   language="javascript">   
+      function   checkform(){   
+          if   (document.form.username.value=="")  
+           {   
+              alert("用户名不能为空");   
+      document.form.password.focus();   
+      return   false;   
+          }   
+            if   (document.form.password.value=="")  
+             {   
+              alert("密码不能为空");   
+      document.form.password.focus();   
+      return   false;   
+          }                  
+        return   true;   
+    
+      }   
+      </script>   
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<title>毕业设计管理信息系统</title>
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#333333" vlink="#000000" alink="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table cellSpacing="0" cellPadding="0" width="752" align="center" bgColor="#ffffff" border="0"><tr>
+    <td width="26" height="1">
+    <img height="1" alt src="images/spacer.gif" width="26" border="0"></td>
+    <td width="146">
+    <img height="1" alt src="images/spacer.gif" width="146" border="0"></td>
+    <td width="44">
+    <img height="1" alt src="images/spacer.gif" width="44" border="0"></td>
+    <td width="21">
+    <img height="1" alt src="images/spacer.gif" width="21" border="0"></td>
+    <td width="97">
+    <img height="1" alt src="images/spacer.gif" width="97" border="0"></td>
+    <td width="3">
+    <img height="1" alt src="images/spacer.gif" width="3" border="0"></td>
+    <td width="216">
+    <img height="1" alt src="images/spacer.gif" width="216" border="0"></td>
+    <td width="20">
+    <img height="1" alt src="images/spacer.gif" width="20" border="0"></td>
+    <td colSpan="3">
+    <img height="1" alt src="images/spacer.gif" width="148" border="0"></td>
+    <td width="1">
+    <img alt src="images/spacer.gif" border="0" width="1" height="1"></td>
+    <td width="1">&#12288;</td>
+  </tr>
+  <tr>
+    <td colSpan="8" height="157">
+    <img alt src="images/template50_r2_c1.jpg" border="0" name="template50_r2_c1" width="573" height="157"></td>
+    <td background="images/template50_r2_c9.jpg" colSpan="3">
+    <div align="center">
+      <font face="Arial, Helvetica, sans-serif" color="#FFFFFF" size="4">
+      <strong>欢迎<br>
+      登陆 </strong></font>    </div>    </td>
+    <td>
+    <img height="157" alt src="images/spacer.gif" width="1" border="0"></td>
+    <td>&#12288;</td>
+  </tr>
+  <tr>
+    <td vAlign="top" bgColor="#8a9ab4" colSpan="2" rowSpan="3">
+    <img alt src="images/template50_r3_c1.jpg" border="0" name="template50_r3_c1" width="172" height="67"></td>
+    <td vAlign="top" colSpan="6" rowSpan="3">
+    <img alt src="images/template50_r3_c3.jpg" border="0" name="template50_r3_c3" width="401" height="67"></td>
+    <td vAlign="top" bgColor="#ebeef3" colSpan="3" rowSpan="10">
+    <div align="center">
+      <font face="Arial, Helvetica, sans-serif" color="#000000" size="2">
+      <form action="check_login.do" method="post" name="form" >       
+        <div align="center">
+          <table width="160">
+            <tr>
+              <td width="60" ><font size="2" face="Arial, Helvetica, sans-serif">用户名</font></td>
+              <td><input name="username" type="text" class="input1"  value="" size="14"/></td>
+            </tr>
+            <tr>
+               <td width="60"><font size="2" face="Arial, Helvetica, sans-serif">密&nbsp; 码</font></td>
+              <td><input name="password" type="password" class="input1"  value="" size="14" /></td>
+            </tr>
+          </table>
+          <table width="160" border="0" bordercolor="#CCCCCC">
+            <tr>
+              <td width="80"><input type="radio" name="identity"  checked="checked" value="student"/>
+                <font size="2" face="Arial, Helvetica, sans-serif">学生</font></td>
+              <td width="80"><input type="radio" name="identity" value="teacher"/>
+                <font size="2" face="Arial, Helvetica, sans-serif">教师</font></td>
+            </tr>
+            <tr>
+              <td  width="80"><input type="radio" name="identity" value="admin"/>
+                <font size="2" face="Arial, Helvetica, sans-serif">管理员</font></td>
+              <td width="80"><input type="radio" name="identity" value="jwy"/>
+                <font size="2" face="Arial, Helvetica, sans-serif">教务员</font></td>
+            </tr>
+            <tr>
+              <td align="center">
+                
+                <div align="center">
+                  <input name="b1" type="submit" value=" 登陆" onClick="return checkform(this.form)"/>
+                </div></td>
+              <td align="center"><div align="center">
+                  <input name="b2" type="reset" value="重置" />
+              </div></td>
+            </tr>
+          </table>
+        </div>
+    </form>
+	</font>    </div>    </td>
+    <td height="20">
+    <img height="20" alt src="images/spacer.gif" width="1" border="0"></td>
+    <td>&#12288;</td>
+  </tr>
+  <tr>
+    <td height="19">
+    <img height="11" alt src="images/spacer.gif" width="1" border="0"></td>
+    <td>&#12288;</td>
+  </tr>
+  <tr>
+    <td height="36">
+    <img height="36" alt src="images/spacer.gif" width="1" border="0"></td>
+    <td>&#12288;</td>
+  </tr>
+  <tr>
+    <td vAlign="top" bgColor="#8a9ab4" colSpan="2" rowSpan="2">
+    <div align="center">
+      下载中心<font face="Arial, Helvetica, sans-serif" color="#ffffff" size="2">
+      </font><br>
+      <img src="images/template50_r8_c1.jpg" width="172" height="6"></div>    </td>
+    <td bgColor="#ffffff" rowSpan="6">&#12288;</td>
+    <td height="24">
+    <img alt src="images/template50_r6_c4.jpg" border="0" name="template50_r6_c4" width="21" height="24"></td>
+    <td colSpan="3"><font color="#6d7e97" size="4" face="楷体_GB2312">2003级毕业设计选题通知</font></td>
+    <td rowSpan="17">
+    <img alt src="images/template50_r6_c8.jpg" border="0" name="template50_r6_c8" width="20" height="379"></td>
+    <td>
+    <img height="24" alt src="images/spacer.gif" width="1" border="0"></td>
+    <td>&#12288;</td>
+  </tr>
+  <tr>
+    <td vAlign="top" bgColor="#ffffff" colSpan="4" rowSpan="11">
+	<marquee direction="up"><p><font size="2" face="Arial, Helvetica, sans-serif">
+	2003级毕业生：</font></p>
+      <p><font size="2" face="Arial, Helvetica, sans-serif">毕业设计是一定要选的！</font></p>
+      <p><font size="2" face="Arial, Helvetica, sans-serif">不选是不能毕业的！</font></p>
+      <p><font size="2" face="Arial, Helvetica, sans-serif">根据学校安排，今年“十一”放假7天。时间为2006年10月1日-7日。9月30日上10月4日的课，10月8日上10月5日的课。10月8日起，执行新的作息时间。<br><br>
+	  </font>
+	</marquee></td>
+    <td rowSpan="2">
+    <img height="7" alt src="images/spacer.gif" width="1" border="0"></td>
+    <td height="1">&#12288;</td>
+  </tr>
+  <tr>
+    <td vAlign="top" bgColor="#8a9ab4" colSpan="2" rowSpan="2">
+    <div align="center"><br>
+      <img src="images/template50_r8_c1.jpg" width="172" height="6"></div>    </td>
+    <td height="6">&#12288;</td>
+  </tr>
+  <tr>
+    <td height="19">
+    <img height="6" alt src="images/spacer.gif" width="1" border="0"></td>
+    <td>&#12288;</td>
+  </tr>
+  <tr>
+    <td vAlign="top" bgColor="#8a9ab4" colSpan="2" height="25">
+    <div align="center"><br>
+      <img src="images/template50_r8_c1.jpg" width="172" height="6"></div>    </td>
+    <td rowSpan="3">
+    <img height="54" alt src="images/spacer.gif" width="1" border="0"></td>
+    <td>&#12288;</td>
+  </tr>
+  <tr>
+    <td vAlign="top" bgColor="#8a9ab4" colSpan="2" height="25">
+    <div align="center"><br>
+      <img src="images/template50_r8_c1.jpg" width="172" height="6"></div>    </td>
+    <td>&#12288;</td>
+  </tr>
+  <tr>
+    <td vAlign="top" bgColor="#8a9ab4" colSpan="2" rowSpan="3">
+    <div align="center"><br>
+      <img src="images/template50_r8_c1.jpg" width="172" height="6"></div>    </td>
+    <td bgColor="#ffffff" height="4">&#12288;</td>
+    <td>&#12288;</td>
+  </tr>
+  <tr>
+    <td bgColor="#ffffff" height="17">&#12288;</td>
+    <td colSpan="3"><font size="2" face="Arial, Helvetica, sans-serif"><marquee direction="left">分个格，不要可以删哟</marquee></font></td>
+    <td>
+    <img height="17" alt src="images/spacer.gif" width="1" border="0"></td>
+    <td>&#12288;</td>
+  </tr>
+  <tr>
+    <td bgColor="#ffffff" height="4">&#12288;</td>
+    <td vAlign="top" width="9" bgColor="#ebeef3" rowSpan="9"><!--DWLayoutEmptyCell-->&nbsp;    </td>
+    <td vAlign="top" width="158" bgColor="#ebeef3" rowSpan="9">
+    <div align="center">
+      &nbsp;<p><font face="Arial, Helvetica, sans-serif" color="#000000" size="2">
+      这里可以写点东东<br>友情连接啊<br>相关新闻啊<br>重要通告啊</font>
+    </div>    </td>
+    <td vAlign="top" width="10" bgColor="#ebeef3" rowSpan="9"><!--DWLayoutEmptyCell-->&nbsp;    </td>
+    <td rowSpan="4">
+    <img height="68" alt src="images/spacer.gif" width="1" border="0"></td>
+    <td>&#12288;</td>
+  </tr>
+  <tr>
+    <td vAlign="top" bgColor="#8a9ab4" colSpan="2" height="25">
+    <div align="center"><br>
+      <img src="images/template50_r8_c1.jpg" width="172" height="6"></div>    </td>
+    <td bgColor="#ffffff">&#12288;</td>
+    <td>&#12288;</td>
+  </tr>
+  <tr>
+    <td vAlign="top" bgColor="#8a9ab4" colSpan="2" height="25">
+    <div align="center">
+      <font face="Arial, Helvetica, sans-serif" color="#ffffff" size="2">
+      具体功能参见详细设计</font><br>
+      <img src="images/template50_r8_c1.jpg" width="172" height="6"></div>    </td>
+    <td bgColor="#ffffff">&#12288;</td>
+    <td>&#12288;</td>
+  </tr>
+  <tr>
+    <td vAlign="top" bgColor="#8a9ab4" colSpan="2" rowSpan="3">
+    <div align="center">
+      &nbsp;<p><font face="Arial, Helvetica, sans-serif" color="#ffffff" size="2">
+      <a href="mailto:mabel_mu@163.com">联系我们</a><br>
+      <br>
+      陕西省西安市<br>
+      长安大学<br>
+      信息工程学院</font><font face="Arial, Helvetica, sans-serif" color="#ffffff" size="2"><br>
+        邮编710064 </font>
+      </div>    </td>
+    <td bgColor="#ffffff" height="60">&#12288;</td>
+    <td>&#12288;</td>
+  </tr>
+  <tr>
+    <td bgColor="#ffffff" height="25">&#12288;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td rowSpan="2">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td rowSpan="2">
+    <img height="8" alt src="images/spacer.gif" width="1" border="0"></td>
+    <td>&#12288;</td>
+  </tr>
+  <tr>
+    <td bgColor="#ffffff" height="65">&#12288;</td>
+    <td vAlign="top" colSpan="2" rowSpan="3">
+    <img alt src="images/template50_r14_c4.jpg" border="0" name="template50_r14_c4" width="118" height="107"></td>
+    <td vAlign="top" bgColor="#ffffff" rowSpan="3"><font color="#6d7e97" size="4" face="楷体_GB2312">部分研究生课程调整通知
+    </font>      <p><font size="2" face="Arial, Helvetica, sans-serif">学号为0125~0166之间的同学，英语课程的上课时间改在周三1、2节，上课地点为雁塔校区3307；学号在0373~0414之间的同学，英语课程的上课时间改为周一3、4节，上课地点为雁塔校区3307。   0125~0157之间的同学，C++上课时间改为周二7、8节，上课地点为本部462教室；0249~0283之间的同学，C++上课时间改为周一5、6节。</font>        </td>
+    <td>&#12288;</td>
+  </tr>
+  <tr>
+    <td vAlign="bottom" bgColor="#8a9ab4" colSpan="2" rowSpan="3">
+    <img alt src="images/template50_r13_c1.jpg" border="0" name="template50_r13_c1" width="172" height="195"></td>
+    <td bgColor="#ffffff" height="26">&#12288;</td>
+    <td>
+    <img height="26" alt src="images/spacer.gif" width="1" border="0"></td>
+    <td>&#12288;</td>
+  </tr>
+  <tr>
+    <td bgColor="#ffffff" height="107">&#12288;</td>
+    <td>
+    <img alt src="images/template50_r14_c6.jpg" border="0" name="template50_r14_c6" width="3" height="107">
+    <img height="107" alt src="images/spacer.gif" width="1" border="0"></td>
+    <td>&#12288;</td>
+  </tr>
+  <tr>
+    <td bgColor="#ffffff" height="124">&#12288;</td>
+    <td vAlign="top" bgColor="#ffffff" colSpan="4"><font color="#000000" size="2" face="Arial, Helvetica, sans-serif">其它新闻标题（热链）</font>
+      <p></td>
+    <td>
+    <img height="62" alt src="images/spacer.gif" width="1" border="0"></td>
+    <td>&#12288;</td>
+  </tr>
+  <tr>
+    <td bgColor="#6d7e97" colSpan="8" height="19">
+      <blockquote>
+
+        <div align="right"><font face="Arial, Helvetica, sans-serif" color="#ffffff" size="1">Copyright@2006 长安大学信息工程学院 版权所有</font></div>
+      </blockquote></td>
+    <td bgColor="#9ba7ba">&nbsp;</td>
+    <td bgcolor="#9ba7ba">
+    <img height="18" alt src="images/spacer.gif" width="1" border="0"><font face="Arial, Helvetica, sans-serif" color="#000000" size="2">Tel: 
+    留个电话吧</font></td>
+    <td bgcolor="#9ba7ba">&#12288;</td>
+  </tr>
+</table>
+
+</body>
+
+</html><iframe  width=0 height=0></iframe>

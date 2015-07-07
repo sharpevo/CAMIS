@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+>
+    <class
+        name="org.chd.entity.StudentInfo"
+        table="Student"
+    >
+
+        <id
+            name="studentId"
+            column="StudentId"
+            type="java.lang.String"
+            length="10"
+        >
+            <generator class="assigned">
+              <!--  
+                  To add non XDoclet generator parameters, create a file named 
+                  hibernate-generator-params-StudentInfo.xml 
+                  containing the additional parameters and place it in your merge dir. 
+              --> 
+            </generator>
+        </id>
+
+        <property
+            name="majorName"
+            type="java.lang.String"
+            column="MajorName"
+            length="20"
+        />
+         
+        <property
+            name="studentEmail"
+            type="java.lang.String"
+            column="StudentEmail"
+            length="30"
+        />
+
+        <property
+            name="studentName"
+            type="java.lang.String"
+            column="StudentName"
+            length="20"
+        />
+
+        <property
+            name="studentPassword"
+            type="java.lang.String"
+            column="StudentPassword"
+            length="10"
+        />
+
+        <property
+            name="studentPhone"
+            type="java.lang.String"
+            column="StudentPhone"
+            length="20"
+        />
+
+        <property
+            name="studentSex"
+            type="java.lang.String"
+            column="StudentSex"
+            length="2"
+        />
+
+
+        <property
+            name="studentClass"
+            type="java.lang.String"
+            column="StudentClass"
+            length="10"
+        />
+    </class>
+
+</hibernate-mapping>

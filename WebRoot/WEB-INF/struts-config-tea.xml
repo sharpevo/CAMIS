@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<data-sources />
+<form-beans>
+
+    <form-bean name="skimPreForm" type="org.chd.tea.struts.form.SkimPreForm" />
+    <form-bean name="psPreForm" type="org.chd.tea.struts.form.PsPreForm" />
+    <form-bean name="psForm" type="org.chd.tea.struts.form.PsForm" />
+    <form-bean name="subjectForm" type="org.chd.tea.struts.form.SubjectForm" />
+    <form-bean name="requirementForm" type="org.chd.tea.struts.form.RequirementForm" />
+ 	<form-bean name="scoreForm" type="org.apache.struts.validator.DynaValidatorActionForm" >
+		<form-property name="achievement" type="java.lang.String" initial=""/>
+		<form-property name="argumentation" type="java.lang.String" initial=""/>
+		<form-property name="comment" type="java.lang.String" initial=""/>
+		<form-property name="design" type="java.lang.String" initial=""/>
+		<form-property name="designSpecification" type="java.lang.String" initial=""/>
+		<form-property name="innovation" type="java.lang.String" initial=""/>
+		<form-property name="reply" type="java.lang.String" initial=""/>
+		<form-property name="tag" type="java.lang.Boolean" initial=""/>
+		<form-property name="translating" type="java.lang.String" initial=""/>				
+		<form-property name="verbalReport" type="java.lang.String" initial=""/>
+		<form-property name="workLoad" type="java.lang.String" initial=""/>
+	</form-bean>
+    <form-bean name="teaInfoForm" type="org.chd.tea.struts.form.TeaInfoForm" />
+    <form-bean name="sendMailForm" type="org.chd.tea.struts.form.SendMailForm" />
+    <form-bean name="stuIdForm" type="org.chd.tea.struts.form.StuIdForm" />
+</form-beans>
+
+<global-exceptions>
+	<exception key="error.default" path="/exception.jsp" type="java.lang.Exception"/>
+</global-exceptions>	
+	
+
+<global-forwards>
+	  <forward name="failure" path="/error.jsp"/>
+	  <forward name="illegalAccess" path="/warning.jsp"/>
+	  <forward name="teaEntry" path="/teaEntry.do"/>
+	  <forward name="illegalRole" path="/teaEntry.do"/>
+</global-forwards>
+	
+	
+	
+<action-mappings type="org.chd.tea.TeaActionMapping"> 
+
+
+	
+
+
+
+<!-- ==================== Usecase Teacher Entrance Information Actions ============================== -->
+
+					<!-- Jsp mapping -->
+	
+	<action path="/welcomeView" type="org.apache.struts.actions.ForwardAction" 
+            parameter="/WEB-INF/views/tea/welcome.jsp">
+            <set-property property="preAction" value="action.teaEntry"/>
+    </action>
+     
+					<!-- Action mapping -->
+    
+    <action path="/teaEntry" type="org.chd.tea.struts.action.TeaEntryAction">
+    	<forward name="suc" path="/welcomeView.do"/>
+    	<forward name="teaInfo" path="/teaInfo.do" redirect="true"/>
+    	<forward name="subPre" path="/subPre.do" redirect="true"/>
+    	<forward name="showMySub" path="/showMySub.do" redirect="true"/>
+    	<forward name="showAllSub" path="/showAllSub.do" redirect="true"/>
+    	<forward name="zdPre" path="/zdPre.do" redirect="true"/>
+    	<forward name="censorReport" path="/censorReport.do" redirect="true"/>
+    	<forward name="psPre" path="/psPre.do" redirect="true"/>
+    	<forward name="pyPre" path="/pyPre.do" redirect="true"/>
+    	<forward name="dbPre" path="/dbPre.do" redirect="true"/>
+    	<forward name="logout" path="/logout.do" contextRelative="true" redirect="true"/>
+    </action>
+    
+  
+
+<!-- ==================== Teacher Fill TableZD Information Actions ============================== -->
+
+					<!-- Jsp mapping -->
+	
+	<action path="/zdPreView" type="org.apache.struts.actions.ForwardAction" 
+            parameter="/WEB-INF/views/tea/zdPre.jsp">
+            <set-property property="preAction" value="action.zdPre"/>
+    </action>
+	<action path="/zdScoreView" type="org.apache.struts.actions.ForwardAction" 
+            parameter="/WEB-INF/views/tea/zdScore.jsp">
+            <set-property property="preAction" value="action.zdGet"/>
+    </action>
+     
+					<!-- Action mapping -->
+    
+    <action path="/zdPre" type="org.chd.tea.struts.action.ZdPreAction">
+   		<set-property property="preAction" value="action.teaEntry"/>
+   		<set-property property="preAction" value="action.zdScore"/>
+     	<forward name="suc" path="/zdPreView.do"/>
+    </action>
+     
+    <action path="/zdGet" type="org.chd.tea.struts.action.ZdGetAction" 
+    		attribute="scoreForm"
+    		name="scoreForm"
+    		scope="request"
+    		validate="false">
+    	<set-property property="preAction" value="action.zdPre"/>
+		<forward name="suc" path="/zdScoreView.do"/>
+    </action>
+    
+    <action path="/zdScore"  type="org.chd.tea.struts.action.ZdScoreAction"
+      		attribute="scoreForm"
+     		input="/zdScoreView.do"
+     		name="scoreForm"
+		    scope="request"
+			validate="true">
+		<set-property property="toCrumb" value="false"/>
+		<set-property property="preAction" value="action.zdGet"/>
+    	<forward name="suc" path="/zdPre.do"/>
+    </action>
+
+
+
+<!-- ==================== Teacher Fill TablePY Information Actions ============================== -->
+
+					<!-- Jsp mapping -->
+	
+	<action path="/pyPreView" type="org.apache.struts.actions.ForwardAction" 
+            parameter="/WEB-INF/views/tea/pyPre.jsp">
+            <set-property property="preAction" value="action.pyPre"/>
+    </action>
+	<action path="/pyGetView" type="org.apache.struts.actions.ForwardAction" 
+            parameter="/WEB-INF/views/tea/py.jsp">
+            <set-property property="preAction" value="action.pyGet"/>
+            <set-property property="preAction" value="action.examinePY"/>
+    </action>
+     
+					<!-- Action mapping -->
+    
+    <action path="/pyPre" type="org.chd.tea.struts.action.PyPreAction">
+   		<set-property property="preAction" value="action.teaEntry"/>
+   		<set-property property="preAction" value="action.py"/>
+    	<forward name="suc" path="/pyPreView.do"/>
+    </action>
+        
+    <action path="/examinePY" type="org.chd.tea.struts.action.ExaminePYAction" 
+    		name="scoreForm"
+    		scope="request">
+    	<set-property property="toCrumb" value="false"/>
+    	<set-property property="preAction" value="action.pyGet"/>
+		<forward name="suc" path="/pyGetView.do"/>
+    </action>
+ 
+    <action path="/pyGet" type="org.chd.tea.struts.action.PyGetAction"
+    		name="stuIdForm"
+    		input="/pyPreView.do"
+    		scope="request"
+   			validate="true">
+   		<set-property property="preAction" value="action.pyPre"/>
+    	<forward name="suc" path="/pyGetView.do"/>
+    	<forward name="beScored" path="/examinePY.do"/>
+    </action>
+ 
+    <action path="/py" type="org.chd.tea.struts.action.PyAction"
+      		input="/pyGetView.do"
+      		attribute="scoreForm"
+      		name="scoreForm"
+      		scope="request"
+      		validate="true">
+      	<set-property property="preAction" value="action.pyGet"/>
+      	<set-property property="preAction" value="action.examinePY"/>
+      	<set-property property="toCrumb" value="false"/>
+    	<forward name="suc" path="/pyPre.do"/>
+    </action>
+
+<!-- ==================== Teacher comment Levle A subject Actions ============================== -->
+
+					<!-- Jsp mapping -->
+	
+	<action path="/psPreView" type="org.apache.struts.actions.ForwardAction" 
+            parameter="/WEB-INF/views/tea/psPre.jsp">
+            <set-property property="preAction" value="action.psPre"/>
+    </action>
+	<action path="/psGetView" type="org.apache.struts.actions.ForwardAction" 
+            parameter="/WEB-INF/views/tea/ps.jsp">
+            <set-property property="preAction" value="action.psGet"/>
+    </action>
+     
+					<!-- Action mapping -->
+
+    <action path="/psPre" type="org.chd.tea.struts.action.PsPreAction">
+	    <set-property property="preAction" value="action.teaEntry"/>
+    	<forward name="suc" path="/psPreView.do"/>
+    </action>
+    
+    <action path="/psGet" type="org.chd.tea.struts.action.PsGetAction" 
+         	attribute="psForm"
+     		scope="request"
+     		validate="false">
+     	<set-property property="preAction" value="action.psPre"/>
+    	<forward name="suc" path="/psGetView.do"/>
+    </action>
+    
+    <action path="/ps" type="org.chd.tea.struts.action.PsAction"
+      		attribute="psForm"
+      		input="/psGetView.do"
+      		name="psForm"
+		    scope="request"
+		    validate="true">
+		<set-property property="toCrumb" value="false"/>
+		<set-property property="preAction" value="action.psGet"/>
+    	<forward name="suc" path="/psPre.do"/>
+    </action>
+
+
+
+<!-- ==================== Teacher Fill TableDB Information Actions ============================== -->
+
+					<!-- Jsp mapping -->
+	
+	<action path="/dbPreView" type="org.apache.struts.actions.ForwardAction" 
+            parameter="/WEB-INF/views/tea/dbPre.jsp">
+            <set-property property="preAction" value="action.dbPre"/>
+    </action>
+    <action path="/dbView" type="org.apache.struts.actions.ForwardAction"
+    		parameter="/WEB-INF/views/tea/db.jsp">
+            <set-property property="preAction" value="action.dbGet"/>
+            <set-property property="preAction" value="action.examineDB"/>
+    </action>
+
+					<!-- Action mapping -->
+					
+    <action path="/dbPre" type="org.chd.tea.struts.action.DbPreAction">
+    	<set-property property="preAction" value="action.teaEntry"/>
+    	<set-property property="preAction" value="action.db"/>
+		<forward name="suc" path="/dbPreView.do"/>
+		
+    </action>
+    
+    <action path="/examineDB" type="org.chd.tea.struts.action.ExamineDBAction"     		
+    		name="scoreForm"
+    		scope="request">
+    	<set-property property="toCrumb" value="false"/>
+    	<set-property property="preAction" value="action.dbGet"/>
+		<forward name="suc" path="/dbView.do"/>
+    </action>
+    
+    <action path="/dbGet" type="org.chd.tea.struts.action.DbGetAction"
+    		attribute="stuIdForm"
+    		name="stuIdForm"
+   			input="/dbPreView.do"
+    		scope="request"
+ 		    validate="true">
+ 		<set-property property="preAction" value="action.dbPre"/>
+    	<forward name="suc" path="/dbView.do"/>
+    	<forward name="beScored" path="/examineDB.do"/>
+    </action>
+
+    <action path="/db" type="org.chd.tea.struts.action.DbAction"
+    		attribute="scoreForm"
+    		input="/dbView.do"
+   			name="scoreForm"
+    		scope="request"
+		    validate="true">
+		<set-property property="toCrumb" value="false"/>
+ 		<set-property property="preAction" value="action.dbGet"/>
+ 		<set-property property="preAction" value="action.examineDB"/>
+    	<forward name="suc" path="/dbPre.do"/>
+    </action>
+
+
+
+  <!-- ==================== Teacher Modify Information Actions ============================== -->
+
+					<!-- Jsp mapping -->
+	
+	<action path="/teaInfoView" type="org.apache.struts.actions.ForwardAction" 
+            parameter="/WEB-INF/views/tea/teaInfo.jsp">
+            <set-property property="preAction" value="action.teaInfo"/>
+    </action>
+	<action path="/editTeaPasswordView" type="org.apache.struts.actions.ForwardAction" 
+            parameter="/WEB-INF/views/tea/editTeaPassword.jsp">
+			<set-property property="preAction" value="action.modifyPSW"/>
+    </action>
+    <action path="/editTeaPropertyView" type="org.apache.struts.actions.ForwardAction" 
+            parameter="/WEB-INF/views/tea/editTeaProperty.jsp">
+			<set-property property="preAction" value="action.modifyTea"/>
+    </action>
+                 
+					<!-- Action mapping -->
+    
+    <action path="/teaInfo" type="org.chd.tea.struts.action.TeaInfoAction">
+    	<set-property property="preAction" value="action.teaEntry"/>
+    	<set-property property="preAction" value="action.editTeaProperty"/>
+    	<set-property property="preAction" value="action.editTeaPassword"/>
+		<forward name="suc" path="/teaInfoView.do"/>
+    </action>
+    
+    <action path="/modifyTea" type="org.chd.tea.struts.action.ModifyTeaAction"
+    		attribute="teaInfoForm"
+    		scope="request"
+    		validate="false">
+    	<set-property property="preAction" value="action.teaInfo"/>
+		<forward name="suc" path="/editTeaPropertyView.do"/>
+    </action>
+  
+    <action path="/modifyPSW" type="org.chd.tea.struts.action.ModifyPSWAction" 
+    		attribute="teaInfoForm"
+    		scope="request"
+    		validate="true">
+    	<set-property property="preAction" value="action.teaInfo"/>	
+		<forward name="suc" path="/editTeaPasswordView.do"/>
+    </action>
+
+    <action path="/editTeaProperty" type="org.chd.tea.struts.action.EditTeaInfoAction" 
+    		name="teaInfoForm"
+    		scope="request"
+    		input="/editTeaPropertyView.do"
+    		validate="true"
+    		parameter="action">
+    	<set-property property="toCrumb" value="false"/>
+    	<set-property property="preAction" value="action.modifyTea"/>
+		<forward name="suc" path="/teaInfo.do"/>
+    </action>
+    
+    <action path="/editTeaPassword" type="org.chd.tea.struts.action.EditTeaInfoAction" 
+    		name="teaInfoForm"
+    		scope="request"
+    		input="/editTeaPasswordView.do"
+    		validate="true"
+    		parameter="action">
+    	<set-property property="toCrumb" value="false"/>
+    	<set-property property="preAction" value="action.modifyPSW"/>
+		<forward name="suc" path="/teaInfo.do"/>
+    </action>
+    
+ 
+    
+<!-- ==================== Teacher Censor OpeningReport Actions ============================== -->   
+
+					<!-- Jsp mapping -->
+	
+	<action path="/reportListView" type="org.apache.struts.actions.ForwardAction" 
+            parameter="/WEB-INF/views/tea/reportList.jsp">
+			<set-property property="preAction" value="action.censorReport"/>
+    </action>
+	<action path="/reportDetailView" type="org.apache.struts.actions.ForwardAction" 
+            parameter="/WEB-INF/views/tea/reportDetail.jsp">
+			<set-property property="preAction" value="action.reportDetail"/>
+    </action>
+	<action path="/writeMailView" type="org.apache.struts.actions.ForwardAction" 
+            parameter="/WEB-INF/views/tea/writeMail.jsp">
+			<set-property property="preAction" value="action.writeMail"/>
+    </action>
+                 
+					<!-- Action mapping -->
+    
+    <action path="/censorReport" type="org.chd.tea.struts.action.CensorReportAction" >
+    	<set-property property="preAction" value="action.teaEntry"/>
+    	<set-property property="preAction" value="action.sendMail"/>
+    	<forward name="suc" path="/reportListView.do"/>
+    </action>
+    
+    <action path="/reportDetail" type="org.chd.tea.struts.action.ReportDetailAction" >
+    	<set-property property="preAction" value="action.censorReport"/>
+    	<forward name="suc" path="/reportDetailView.do"/>
+    </action>
+  
+    <action path="/writeMail" type="org.chd.tea.struts.action.WriteMailAction"
+    		attribute="sendMailForm"
+    		scope="request"
+    		validate="true">
+    	<set-property property="preAction" value="action.reportDetail"/>
+		<forward name="suc" path="/writeMailView.do"/>
+    </action>
+    
+    <action path="/sendMail" type="org.chd.tea.struts.action.SendMailAction" 
+    		name="sendMailForm"
+    		scope="request"
+    		input="/writeMailView.do"
+    		validate="true">
+    	<set-property property="toCrumb" value="false"/>
+    	<set-property property="preAction" value="action.writeMail"/>
+    	<forward name="suc" path="/censorReport.do"/>
+    </action>
+    
+    
+<!-- ==================== Subject & Requirement Information Actions ============================== -->
+
+					<!-- Jsp mapping -->
+	
+	<action path="/fillSUBView" type="org.apache.struts.actions.ForwardAction" 
+            parameter="/WEB-INF/views/tea/fillSUB.jsp">
+            <set-property property="preAction" value="action.subPre"/>
+    </action>
+	<action path="/reviewSUBView" type="org.apache.struts.actions.ForwardAction" 
+            parameter="/WEB-INF/views/tea/reviewSUB.jsp">
+            <set-property property="preAction" value="action.subPre"/>
+    </action>
+	<action path="/fillREQView" type="org.apache.struts.actions.ForwardAction" 
+            parameter="/WEB-INF/views/tea/fillREQ.jsp">
+            <set-property property="preAction" value="action.reqPre"/>
+    </action>
+	<action path="/reviewREQView" type="org.apache.struts.actions.ForwardAction" 
+            parameter="/WEB-INF/views/tea/reviewREQ.jsp">
+            <set-property property="preAction" value="action.reqPre"/>
+    </action>
+	<action path="/showMySubView" type="org.apache.struts.actions.ForwardAction" 
+            parameter="/WEB-INF/views/tea/showMySub.jsp">
+            <set-property property="preAction" value="action.showMySub"/>
+    </action>
+                 
+					<!-- Action mapping -->
+    
+    <action path="/subPre" type="org.chd.tea.struts.action.SubPreAction" 
+    		attribute="subjectForm"
+    		scope="request" >
+    	<set-property property="preAction" value="action.teaEntry"/>
+    	<set-property property="preAction" value="action.showMySub"/>
+   		<forward name="suc" path="/fillSUBView.do"/>
+    </action>
+    
+    <action path="/reqPre" type="org.chd.tea.struts.action.ReqPreAction" 
+    		attribute="requirementForm"
+    		scope="request" >
+    	<set-property property="preAction" value="action.teaEntry"/>
+    	<set-property property="preAction" value="action.subPre"/>
+    	<set-property property="preAction" value="action.showMySub"/>
+		<forward name="suc" path="/fillREQView.do"/>
+    </action>
+    
+    <action path="/deleteSubject" type="org.chd.tea.struts.action.SubjectInfoAction" 
+    		parameter="action">
+    	<set-property property="toCrumb" value="false"/>
+    	<set-property property="preAction" value="action.showMySub"/>
+		<forward name="suc" path="/showMySub.do"/>
+    </action>
+    
+    <action path="/deleteRequirement" type="org.chd.tea.struts.action.RequirementInfoAction" 
+    		parameter="action">
+    	<set-property property="toCrumb" value="false"/>
+    	<set-property property="preAction" value="action.reqPre"/>
+		<forward name="suc" path="/showMySub.do"/>
+    </action> 
+    
+    <action path="/subjectInfo" type="org.chd.tea.struts.action.SubjectInfoAction" 
+        	attribute="subjectForm"
+        	name="subjectForm"
+    		scope="request"
+    		input="/fillSUBView.do"
+    		validate="true"
+    		parameter="action">
+		<set-property property="toCrumb" value="false"/>
+    	<set-property property="preAction" value="action.subPre"/>
+    	<set-property property="preAction" value="action.showMySub"/>
+		<forward name="suc" path="/reviewSUBView.do"/>
+        <forward name="cancel" path="/teaEntry.do"/>
+	</action>
+
+	<action path="/requirementInfo" type="org.chd.tea.struts.action.RequirementInfoAction"
+    		name="requirementForm"
+    		scope="request"
+    		input="/fillREQView.do"
+    		validate="true"
+    		parameter="action">
+		<set-property property="toCrumb" value="false"/>
+    	<set-property property="preAction" value="action.reqPre"/>
+    	<set-property property="preAction" value="action.showMySub"/>
+		<forward name="suc" path="/reviewREQView.do"/>
+		<forward name="cancel" path="/teaEntry.do"/>
+	 </action>
+	 
+	 <action path="/showMySub" type="org.chd.tea.struts.action.ShowMySubAction" >
+     	<set-property property="preAction" value="action.teaEntry"/>
+		<forward name="suc" path="/showMySubView.do"/>
+    </action>
+
+
+    
+<!-- ==================== Skim Subject Information Actions ============================== -->  
+
+					<!-- Jsp mapping -->
+	
+	<action path="/showAllSubView" type="org.apache.struts.actions.ForwardAction" 
+            parameter="/WEB-INF/views/tea/showAllSub.jsp">
+            <set-property property="preAction" value="action.showAllSub"/>
+    </action>
+	<action path="/skimSubView" type="org.apache.struts.actions.ForwardAction" 
+            parameter="/WEB-INF/views/tea/skimSub.jsp">
+            <set-property property="preAction" value="action.skimSub"/>
+    </action>
+	<action path="/skimTeaView" type="org.apache.struts.actions.ForwardAction" 
+            parameter="/WEB-INF/views/tea/skimTea.jsp">
+            <set-property property="preAction" value="action.skimTea"/>
+    </action>
+                 
+					<!-- Action mapping -->
+    
+    <action path="/showAllSub" type="org.chd.tea.struts.action.ShowAllSubAction"
+    		attribute="skimPreForm"
+    		name="skimPreForm"
+    		scope="request">
+    	<set-property property="preAction" value="action.teaEntry"/>
+		<forward name="forward" path="/showAllSubView.do" redirect="true"/>
+		<forward name="suc" path="/showAllSubView.do"/>
+	</action>
+	
+	<action path="/skimSub" type="org.chd.tea.struts.action.SkimSubAction">
+		<set-property property="preAction" value="action.psPre"/>
+		<set-property property="preAction" value="action.showAllSub"/>
+    	<forward name="suc" path="/skimSubView.do"/>
+    </action>
+	
+	<action path="/skimTea" type="org.chd.tea.struts.action.SkimTeaAction">
+		<set-property property="preAction" value="action.showAllSub"/>
+    	<forward name="suc" path="/skimTeaView.do"/>
+    </action>
+
+	
+	
+
+</action-mappings>
+ 
+
+<controller processorClass="org.chd.tea.TeaRequestProcessor"/> 
+  
+<message-resources parameter="org.chd.struts.ApplicationResources" />
+	
+<message-resources parameter="org.chd.tea.LabelResources" key="labels" />	
+
+
+<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+	<set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/validationTea.xml" />
+</plug-in>
+<plug-in className="fr.improve.struts.taglib.layout.workflow.LayoutPlugin"/>
+<plug-in className="org.chd.tea.TeacherPlugIn" />
+
+</struts-config>
+

@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="StudentRegistrationForm"
+			type="org.chd.struts.adm.form.StudentRegistrationForm" />
+		<form-bean name="TeacherRegistrationForm"
+			type="org.chd.struts.adm.form.TeacherRegistrationForm" />
+		<form-bean name="AdminLoginForm"
+			type="org.chd.struts.adm.form.AdminLoginForm" />
+		<form-bean name="UserLoginForm"
+			type="org.chd.struts.adm.form.UserLoginForm" />
+		<form-bean name="JwyRegistrationForm"
+			type="org.chd.struts.adm.form.JwyRegistrationForm" />
+		<form-bean name="UserInfoModifyForm"
+			type="org.chd.struts.adm.form.UserInfoModifyForm" />
+		<form-bean name="JwyInfoModifyForm"
+			type="org.chd.struts.adm.form.JwyInfoModifyForm" />
+		<form-bean name="TeacherInfoModifyForm"
+			type="org.chd.struts.adm.form.TeacherInfoModifyForm" />
+		<form-bean name="StudentInfoModifyForm"
+			type="org.chd.struts.adm.form.StudentInfoModifyForm" />
+		<form-bean name="AddNotesForm"
+			type="org.chd.struts.adm.form.AddNotesForm" />
+		<form-bean name="ShowSubjectForm"
+			type="org.chd.struts.adm.form.ShowSubjectForm" />
+		<form-bean name="StudentSubjectShowForm"
+			type="org.chd.struts.adm.form.StudentSubjectShowForm" />
+		<form-bean name="ShowTeacherInfoForm"
+			type="org.chd.struts.adm.form.ShowTeacherInfoForm" />
+		<form-bean name="ShowStudentSubject"
+			type="org.chd.adm.form.ShowStudentSubjectForm" />
+		<form-bean name="ShowStudentSubjectForm"
+			type="org.chd.struts.adm.form.ShowStudentSubjectForm" />
+		<form-bean name="ShowMarkForm"
+			type="org.chd.struts.adm.form.ShowMarkForm" />
+		<form-bean name="AdmInfoModifyForm"
+			type="org.chd.struts.adm.form.AdmInfoModifyForm" />
+		<form-bean name="ShowSubjectNForm"
+			type="org.chd.struts.adm.form.ShowSubjectNForm" />
+		<form-bean name="ShowSubjectBySortForm"
+			type="org.chd.struts.adm.form.ShowSubjectBySortForm" />
+    <form-bean name="StuMarkShowForm" type="org.chd.struts.stu.form.StuMarkShowForm" />
+    <form-bean name="StuInfoModForm" type="org.chd.struts.stu.form.StuInfoModForm"/>
+    <form-bean name="StuSelectSubjectForm" type="org.chd.struts.stu.form.StuSelectSubjectForm" />
+    <form-bean name="AddOpeningPortForm" type="org.chd.struts.stu.form.AddOpeningPortForm" />
+    <form-bean name="ShowTeaInfoForm" type="org.chd.struts.stu.form.ShowTeaInfoForm" />
+    <form-bean name="StuSubjectCancelForm" type="org.chd.struts.stu.form.StuSubjectCancelForm" />
+    <form-bean name="StuPswModForm" type="org.chd.struts.stu.form.StuPswModForm" />
+    <form-bean name="StuPaperUploadForm" type="org.chd.struts.stu.form.StuPaperUploadForm" />
+    <form-bean name="SubjectShowBySortForm" type="org.chd.struts.stu.form.SujbectShowBySortForm" />
+    <form-bean name="ShowSubjectDetailForm" type="org.chd.struts.adm.form.ShowSubjectDetailForm" />
+    <form-bean name="AddNewSubjectForm" type="org.chd.struts.adm.form.AddNewSubjectForm" />
+    <form-bean name="SelectSubjectForm" type="org.chd.struts.stu.form.SelectSubjectForm" />
+    <form-bean name="SubjectDetailForm" type="org.chd.struts.stu.form.SubjectDetailForm" />
+    <form-bean name="JwyQueryForm" type="org.chd.struts.jwy.form.JwyQueryForm" />
+    <form-bean name="JwyInfoModForm" type="org.chd.struts.jwy.form.JwyInfoModForm" />
+    <form-bean name="OpeningReportForm" type="org.chd.struts.stu.form.OpeningReportForm" />
+    <form-bean name="StuSubjectShowForm" type="org.chd.struts.stu.form.StuSubjectShowForm" />
+    <form-bean name="ChangeSubjectForm" type="org.chd.struts.adm.form.ChangeSubjectForm" />
+    <form-bean name="ShowSubjectNBySortForm" type="org.chd.struts.adm.form.ShowSubjectNBysortForm" />
+
+
+	</form-beans>
+
+
+
+	<global-exceptions>
+	<exception key="errors.IOException"  path="error.jsp" type="java.io.IOException"></exception>
+	
+	</global-exceptions>
+	<global-forwards>
+	  <forward name="failure" path="/error.jsp"/>
+	</global-forwards>
+	<action-mappings>
+		<action attribute="UserRegistration" input="/user_reg.jsp"
+			parameter="userType" path="/adm/UserRegistration" scope="request"
+			type="org.chd.struts.adm.action.UserRegistration">
+			<forward name="TeacherRegistration" path="/adm/tea_reg.jsp"
+				redirect="true" />
+			<forward name="JwyRegistration" path="/adm/jwy_reg.jsp"
+				redirect="true" />
+			<forward name="StudentRegistration" path="/adm/stu_reg.jsp"
+				redirect="true" />
+		</action>
+		<action attribute="StudentRegistrationForm"
+			input="/adm/stu_reg.jsp" name="StudentRegistrationForm"
+			path="/adm/StudentRegistration" scope="request"
+			type="org.chd.struts.adm.action.StudentRegistrationAction">
+			<forward name="success" path="/adm/stu_reg.jsp" redirect="true" />
+		</action>
+		<action attribute="TeacherRegistrationForm"
+			input="/adm/tea_reg.jsp" name="TeacherRegistrationForm"
+			path="/adm/TeacherRegistration" scope="request"
+			type="org.chd.struts.adm.action.TeacherRegistrationAction">
+			<forward name="success" path="/adm/tea_reg.jsp"
+				redirect="true" />
+		</action>
+		<action
+      attribute="UserLoginForm"
+      input="/index.html"
+      name="UserLoginForm"
+      path="/check_login"
+      scope="request"
+      type="org.chd.struts.adm.action.UserLoginAction">
+      <forward
+        name="stu_main"
+        path="/stu/index.jsp"
+        redirect="true" />
+      <forward
+        name="adm_main"
+        path="/adm/index.jsp"
+        redirect="true" />
+      <forward
+        name="jwy_main"
+        path="/jwy/index.jsp"
+        redirect="true" />
+      <forward
+        name="tea_main"
+        path="/tea/teaEntry.do"
+        redirect="true" />
+      <forward
+        name="failure"
+        path="/error.jsp"
+        redirect="true" />
+    </action>
+		<action attribute="JwyRegistrationForm" input="/adm/jwy_reg.jsp"
+			name="JwyRegistrationForm" path="/adm/JwyRegistration"
+			scope="request"
+			type="org.chd.struts.adm.action.JwyRegistrationAction">
+			<forward name="success" path="/adm/jwy_reg.jsp"
+				redirect="true" />
+		</action>
+		<action attribute="UserInfoModifyForm"
+			input="/adm/others_info_modify.jsp" name="UserInfoModifyForm"
+			path="/adm/UserInfoModify" scope="request"
+			type="org.chd.struts.adm.action.UserInfoModifyAction">
+			<forward name="TeaInfoShow" path="/adm/tea_info_show.jsp"
+				 />
+			<forward name="StuInfoShow" path="/adm/stu_info_show.jsp"
+				 />
+			<forward name="JwyInfoShow" path="/adm/jwy_info_show.jsp"
+				 />
+		</action>
+		<action attribute="JwyInfoModifyForm"
+			input="/adm/jwy_info_show.jsp" name="JwyInfoModifyForm"
+			path="/adm/JwyInfoModify" scope="request"
+			type="org.chd.struts.adm.action.JwyInfoModifyAction">
+			<forward name="success" path="/adm/jwy_info_show.jsp"
+				 />
+		</action>
+		<action attribute="TeacherInfoModifyForm"
+			input="/adm/tea_info_show.jsp" name="TeacherInfoModifyForm"
+			path="/adm/TeacherInfoModify" scope="request"
+			type="org.chd.struts.adm.action.TeacherInfoModifyAction">
+			<forward name="success" path="/adm/tea_info_show.jsp"
+				 />
+		</action>
+		<action attribute="StudentInfoModifyForm"
+			input="/adm/stu_info_show.jsp" name="StudentInfoModifyForm"
+			path="/adm/StudentInfoModify" scope="request"
+			type="org.chd.struts.adm.action.StudentInfoModifyAction">
+			<forward name="success" path="/adm/stu_info_show.jsp"
+				 />
+		</action>
+		<action attribute="AddNotesForm" input="/adm/news_publish.jsp"
+			name="AddNotesForm" path="/adm/AddNotes" scope="request"
+			type="org.chd.struts.adm.action.AddNotesAction">
+			<forward name="success" path="/adm/news_publish.jsp"
+				/>
+		</action>
+		<action attribute="ShowSubjectForm" name="ShowSubjectForm"
+			path="/adm/ShowSubject" scope="request"
+			type="org.chd.struts.adm.action.ShowSubjectAction">
+			<forward name="success" path="/adm/show_subject.jsp"
+				/>
+		</action>
+
+		<action attribute="ShowTeacherInfoForm"
+			name="ShowTeacherInfoForm" path="/adm/ShowTeacherInfo"
+			scope="request"
+			type="org.chd.struts.adm.action.ShowTeacherInfoAction">
+			<forward name="success" path="/adm/tea_info_list.jsp"
+				 />
+			<forward name="failure" path="/adm/error.jsp"
+				redirect="true" />
+		</action>
+		<action
+      attribute="ShowStudentSubjectForm"
+      input="/adm/stu_change_subject.jsp"
+      name="ShowStudentSubjectForm"
+      path="/adm/ShowStudentSubject"
+      scope="request"
+      type="org.chd.struts.adm.action.ShowStudentSubjectAction">
+      <forward name="wxkt" path="/adm/wxktl.html" />
+      <forward name="success" path="/adm/stu_subject_info.jsp" />
+    </action>
+		<action attribute="ShowMarkForm" input="/adm/query.jsp"
+			name="ShowMarkForm" path="/adm/ShowMark" scope="request"
+			type="org.chd.struts.adm.action.ShowMarkAction">
+			<forward name="markshow" path="/adm/mark_show.jsp"
+				 />
+			<forward name="marksshow" path="/adm/marks_show.jsp"
+				 />
+			<forward name="failure" path="/adm/error.jsp"
+				redirect="true" />
+		</action>
+		<action attribute="AdmInfoModifyForm"
+			input="/adm/adm_pwd_modify.jsp" name="AdmInfoModifyForm"
+			path="/adm/AdmInfoModify" scope="request"
+			type="org.chd.struts.adm.action.AdmInfoModifyAction">
+			<forward name="success" path="/adm/index.jsp"
+				 />
+			<forward name="failure" path="/adm/error.jsp"
+				redirect="true" />
+		</action>
+		<action attribute="ShowSubjectNForm" name="ShowSubjectNForm"
+			path="/adm/ShowSubjectN" scope="request"
+			type="org.chd.struts.adm.action.ShowSubjectNAction">
+			<forward name="success" path="/adm/select_subject.jsp"
+				/>
+		</action>
+		<action attribute="ShowSubjectBySortForm"
+			input="/adm/show_subject.jsp" name="ShowSubjectBySortForm"
+			path="/adm/ShowSubjectBySort" scope="request"
+			type="org.chd.struts.adm.action.ShowSubjectBySortAction">
+			<forward name="success" path="/adm/show_subject_bysort.jsp"
+				 />
+			<forward name="failure" path="/adm/error.jsp"
+				redirect="true" />
+		</action>
+    <action
+      attribute="StuInfoModForm"
+      input="/stu/stu_info_modify.jsp"
+      name="StuInfoModForm"
+      path="/stu/StuInfoMod"
+      scope="request"
+      type="org.chd.struts.stu.action.StuInfoModAction">
+      <forward
+        name="success"
+        path="/stu/stu_info.jsp"
+         />
+    </action>
+    <action
+      attribute="StuMarkShowForm"
+      name="StuMarkShowForm"
+      path="/stu/StuMarkShow"
+      scope="request"
+      type="org.chd.struts.stu.action.StuMarkShowAction">
+      <forward
+        name="success"
+        path="/stu/stu_mark_show.jsp"
+         />
+      <forward
+        name="wxkt"
+        path="/stu/wxkt.html"
+        redirect="true" />
+    </action>
+    <action
+      attribute="StuSelectSubjectForm"
+      name="StuSelectSubjectForm"
+      path="/stu/StuSelectSubject"
+      scope="request"
+      type="org.chd.struts.stu.action.StuSelectSubjectAction">
+      <forward
+        name="success"
+        path="/stu/student_select.jsp"
+        />
+    </action>
+    <action
+      attribute="AddOpeningPortForm"
+      input="/stu/opening_report.jsp"
+      name="AddOpeningPortForm"
+      path="/stu/AddOpeningPort"
+      scope="request"
+      type="org.chd.struts.stu.action.AddOpeningPortAction">
+      <forward
+        name="success"
+        path="/stu/opening_report.jsp"
+         />
+    </action>
+    <action
+      attribute="ShowTeaInfoForm"
+      input="/stu/student_select.jsp"
+      name="ShowTeaInfoForm"
+      path="/stu/ShowTeacherInfo"
+      scope="request"
+      type="org.chd.struts.stu.action.ShowTeaInfoAction">
+      <forward
+        name="success"
+        path="/stu/stu_tea_info.jsp"
+         />
+    </action>
+    <action
+      attribute="StuSubjectCancelForm"
+      name="StuSubjectCancelForm"
+      path="/stu/StuSubjectCancel"
+      scope="request"
+      type="org.chd.struts.stu.action.StuSubjectCancelAction">
+      <forward
+        name="success"
+        path="/stu/index.jsp"
+         />
+    </action>
+    <action
+      attribute="StuPswModForm"
+      name="StuPswModForm"
+      path="/stu/StuPswMod"
+      scope="request"
+      type="org.chd.struts.stu.action.StuPswModAction">
+      <forward
+        name="success"
+        path="/stu/stu_info.jsp"
+        />
+    </action>
+    <action
+      attribute="StuPaperUploadForm"
+      name="StuPaperUploadForm"
+      path="/stu/StuPaperUpload"
+      scope="request"
+      type="org.chd.struts.stu.action.StuPaperUploadAction">
+      <forward
+        name="success"
+        path="upload_success.jsp"
+        redirect="true" />
+    </action>
+    <action
+      attribute="SubjectShowBySortAction"
+      name="SubjectShowBySortForm"
+      path="/stu/ShowSubjectBySort"
+      scope="request"
+      type="org.chd.struts.stu.action.SubjectShowBySortAction">
+      <forward
+        name="success"
+        path="/stu/show_subject_bysort.jsp"
+         />
+    </action>
+    <action
+      attribute="ShowSubjectDetailForm"
+      input="/adm/show_subject.jsp"
+      name="ShowSubjectDetailForm"
+      path="/adm/ShowSubjectDetail"
+      scope="request"
+      type="org.chd.struts.adm.action.ShowSubjectDetailAction">
+      <forward
+        name="success"
+        path="/adm/subject_detail.jsp"
+         />
+    </action>
+    <action
+      attribute="AddNewSubjectForm"
+      input="/adm/select_subject.jsp"
+      name="AddNewSubjectForm"
+      path="/adm/AddNewSubject"
+      scope="request"
+      type="org.chd.struts.adm.action.AddNewSubjectAction">
+      <forward
+        name="success"
+        path="/adm/index.jsp"
+        />
+    </action>
+    <action
+      attribute="SelectSubjectForm"
+      name="SelectSubjectForm"
+      path="/stu/SelectSubject"
+      scope="request"
+      type="org.chd.struts.stu.action.SelectSubjectAction">
+      <forward
+        name="success"
+        path="/stu/index.jsp"
+        redirect="true" />
+        <forward
+        name="cfxt"
+        path="/stu/cfxt.html"
+        redirect="true" />
+    </action>
+    <action
+      attribute="SubjectDetailForm"
+      name="SubjectDetailForm"
+      path="/stu/ShowSubjectDetail"
+      scope="request"
+      type="org.chd.struts.stu.action.SubjectDetailAction">
+      <forward
+        name="success"
+        path="/stu/subject_detail.jsp"
+         />
+    </action>
+    <action
+      attribute="JwyQueryForm"
+      input="/jwy/index.jsp"
+      name="JwyQueryForm"
+      path="/jwy/JwyQuery"
+      scope="request"
+      type="org.chd.struts.jwy.action.JwyQueryAction">
+      <forward name="success" path="/jwy/jwy_query.jsp" />
+      <forward name="failure" path="/error.jsp" />
+    </action>
+    <action
+      attribute="JwyInfoModForm"
+      input="/jwy/jwy_info_modify.jsp"
+      name="JwyInfoModForm"
+      path="/jwy/JwyInfoMod"
+      scope="request"
+      type="org.chd.struts.jwy.action.JwyInfoModAction">
+      <forward name="success" path="/jwy/jwy_info_modify.jsp"   />
+      <forward name="failure" path="/error.jsp" />
+    </action>
+   
+    
+    <action
+      attribute="OpeningReportForm"
+      input="/stu/index.jsp"
+      name="OpeningReportForm"
+      path="/stu/showOpeningReport"
+      scope="request"
+      type="org.chd.struts.stu.action.OpengingReportAction">
+      <forward
+        name="success"
+        path="/stu/opening_report.jsp"
+        />
+      <forward
+        name="wxkt"
+        path="/stu/wxkt.html"
+        redirect="true" />
+      <forward
+        name="failure"
+        path="/error.jsp"
+        redirect="true"
+        contextRelative="true" />
+    </action>
+    <action
+      attribute="StuSubjectShowForm"
+      input="/stu/index.jsp"
+      name="StuSubjectShowForm"
+      path="/stu/subjectShow"
+      scope="request"
+      type="org.chd.struts.stu.action.StuSubjectShowAction">
+      <forward
+        name="wxkt"
+        path="/stu/wxkt.html"
+        redirect="true" />
+      <forward name="success" path="/stu/stu_subject_show.jsp" />
+      <forward
+        name="failure"
+        path="/error.jsp"
+        redirect="true" />
+    </action>
+    <action
+      attribute="ChangeSubjectForm"
+      input="/adm/select_subject.jsp"
+      name="ChangeSubjectForm"
+      path="/adm/changeSubject"
+      scope="request"
+      type="org.chd.struts.adm.action.ChangeSubjectAction">
+      <forward name="success" path="/adm/index.jsp" />
+      <forward
+        name="failure"
+        path="/error.jsp"
+        redirect="true" />
+    </action>
+    <action
+      attribute="ShowSubjectNBySortForm"
+      input="/adm/select_subject.jsp"
+      name="ShowSubjectNBySortForm"
+      path="/adm/showSubjectNBySort"
+      scope="request"
+      type="org.chd.struts.adm.action.ShowSubjectNBySortAction">
+      <forward name="success" path="/adm/show_subjectn_bysort.jsp" />
+      <forward
+        name="failure"
+        path="/error.jsp"
+        redirect="true" />
+    </action>
+    <action path="/logout" type="org.chd.struts.LogoutAction" >
+      <forward name="suc" path="/index.html" redirect="true"/>
+    </action>
+   </action-mappings>
+
+	<message-resources parameter="org.chd.struts.ApplicationResources" />
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml" />
+	</plug-in>
+</struts-config>
+

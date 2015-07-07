@@ -1,0 +1,86 @@
+/* 
+primary layout 
+*/
+
+body {
+	background: white url(../images/bg2.gif) repeat;
+	color: Black;
+	text-align: center;
+	margin: 0 auto;
+	padding: 0;
+	border: 0;	
+}
+body, td, th, p, textarea {
+	font: normal normal 9pt Verdana, Arial, Helvetica, sans-serif, ËÎÌו;
+	letter-spacing: 0.5px;
+}
+
+#wrapper {
+	margin: 0 auto;
+	padding: 0;
+	text-align: left;
+	color: #284B78;
+	border: 1px solid #284B78;
+	background: white;
+}
+#header, #globalnav, #footer {
+	text-align: center;
+}
+#wrapper, #header, #globalnav, #topbar, #maincontent, #footer {
+	width: 776px;
+}
+#header {
+	border-top: thick solid #284B78;
+}
+#messagebar {
+	margin: 10px auto 10px auto;
+	background: Silver;
+	color: #990000;
+	width: 60%;
+	padding: 10px 10px 10px 10px;
+	text-align: center;
+}
+#errorbar {
+	margin: 10px auto 10px auto;
+	background: Silver;
+	color: Red;
+	width: 60%;
+	padding: 10px 10px 10px 10px;
+	text-align: center;
+}
+
+#maincontent {
+}
+#footer {
+	border-bottom: thick solid #284B78;
+	clear: both;
+}
+
+
+/* header */
+#header table {
+	background-color: transparent;
+	width: 100%;
+	margin: 0;
+}
+#header li {
+	padding: 2px 10px 2px 2px;
+}
+#header #li1 {
+	list-style: disc inside url(../image/jt1.gif);
+	display: list-item;
+	}
+#header #li2 {
+	list-style: disc inside url(../image/jt12.gif);
+	}
+#header #li3 {
+	list-style: disc inside url(../image/jt13.gif);
+	}
+#header #li4 {
+	list-style: disc inside url(../image/jt14.gif);
+	}
+
+
+
+
+

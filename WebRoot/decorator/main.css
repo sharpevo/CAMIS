@@ -1,0 +1,62 @@
+
+
+body,td, p {
+    font-family: "Microsoft YaHei",verdana, arial, helvetica, sans-serif;
+    font-size: 12px;
+
+}
+.navigationDiv {
+    border-color: #336699;
+    border-width: 1;
+    border-style: dashed;
+    padding: 4px;
+    font-size: 12px;
+    color: black;
+    background: #def;
+   height: 100%;
+}
+.crumb{
+    font-size: 14px;
+    font-weight: bold;
+}
+.pageTitle{
+    font-weight: bold;
+    font-size: 14px;
+}
+#crumb{
+    background-color: #def;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    border-color: #336699;
+    border-width: 1;
+    border-style: dashed;
+    padding: 3px;
+}
+#pageTitle {
+   /* background-color: #def;
+    color: black;*/
+    font-weight: bold;
+    font-size: 14px;
+    /*border-color: #336699;
+    border-width: 1;
+    border-style: dashed;
+    padding: 3px;*/
+}
+
+#header {
+    padding: 5px;
+    font-size: 16px;
+    color: White;
+    /*font-weight: bold;*/
+    background-color: #336699;
+    text-align: left;
+    height: 75px;
+}
+#footer {
+    text-align: center;
+    /*padding-bottom:10px;*/
+
+}
+
+

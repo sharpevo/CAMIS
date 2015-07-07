@@ -1,0 +1,443 @@
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+
+<form-validation>
+	<global>
+		<constant>
+			<constant-name>zip</constant-name>
+			<constant-value>^\d{5}\d*$</constant-value>
+		</constant>
+	</global>
+	<formset>
+		<form name="TeacherRegistrationForm">
+			<field property="teacherName"
+				depends="required,maxlength">
+				<arg key="teacher.teacherName" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>10</var-value>
+				</var>
+			</field>
+			<field property="teacherPassword"
+				depends="required,maxlength">
+				<arg key="teacher.teacherPassword" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+			<field property="majorName" depends="required,maxlength">
+				<arg key="teacher.majorName" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+			<field property="fieldName" depends="required,maxlength">
+				<arg key="teacher.fieldName" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+			<field property="teacherSex" depends="required,maxlength">
+				<arg key="teacher.teacherSex" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<field property="teacherId" depends="required,maxlength">
+				<arg key="teacher.teacherId" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>10</var-value>
+				</var>
+			</field>
+			<field property="post" depends="required,maxlength">
+				<arg key="teacher.post" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>10</var-value>
+				</var>
+			</field>
+			<field property="teacherPhone"
+				depends="required,maxlength">
+				<arg key="teacher.teacherPhone" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>10</var-value>
+				</var>
+			</field>
+			<field property="teacherEmail"
+				depends="required,email,maxlength">
+				<arg key="teacher.teacherEmail" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+		</form>
+
+		<form name="TeacherInfoModifyForm">
+			<field property="teacherName"
+				depends="required,maxlength">
+				<arg key="teacher.teacherName" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>10</var-value>
+				</var>
+			</field>
+			<field property="teacherPassword"
+				depends="required,maxlength">
+				<arg key="teacher.teacherPassword" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+			<field property="majorName" depends="required,maxlength">
+				<arg key="teacher.majorName" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+			<field property="fieldName" depends="required,maxlength">
+				<arg key="teacher.fieldName" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+			<field property="teacherSex" depends="required,maxlength">
+				<arg key="teacher.teacherSex" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<field property="teacherId" depends="required,maxlength">
+				<arg key="teacher.teacherId" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>10</var-value>
+				</var>
+			</field>
+			<field property="post" depends="required,maxlength">
+				<arg key="teacher.post" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>10</var-value>
+				</var>
+			</field>
+			<field property="teacherPhone"
+				depends="required,maxlength">
+				<arg key="teacher.teacherPhone" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>10</var-value>
+				</var>
+			</field>
+			<field property="teacherEmail"
+				depends="required,email,maxlength">
+				<arg key="teacher.teacherEmail" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+		</form>
+
+		<form name="StudentRegistrationForm">
+			<field property="studentId" depends="required,maxlength">
+				<arg key="student.studentId" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>10</var-value>
+				</var>
+			</field>
+			<field property="studentPassword"
+				depends="required,maxlength">
+				<arg key="student.studentPassword" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>10</var-value>
+				</var>
+			</field>
+			<field property="studentName"
+				depends="required,maxlength">
+				<arg key="student.studentName" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>10</var-value>
+				</var>
+			</field>
+			<field property="majorName" depends="required,maxlength">
+				<arg key="student.majorName" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+			<field property="studentSex" depends="required,maxlength">
+				<arg key="student.studentSex" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<field property="studentClass"
+				depends="required,maxlength">
+				<arg key="student.studentClass" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>10</var-value>
+				</var>
+			</field>
+			<field property="studentPhone"
+				depends="required,maxlength">
+				<arg key="student.studentPhone" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>10</var-value>
+				</var>
+			</field>
+			<field property="studentEmail"
+				depends="required,email,maxlength">
+				<arg key="student.studentEmail" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+		</form>
+
+		<form name="StudentInfoModifyForm">
+			<field property="studentId" depends="required,maxlength">
+				<arg key="student.studentId" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>10</var-value>
+				</var>
+			</field>
+			<field property="studentPassword"
+				depends="required,maxlength">
+				<arg key="student.studentPassword" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+			<field property="studentName"
+				depends="required,maxlength">
+				<arg key="student.studentName" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>10</var-value>
+				</var>
+			</field>
+			<field property="majorName" depends="required,maxlength">
+				<arg key="student.majorName" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+			<field property="studentSex" depends="required,maxlength">
+				<arg key="student.studentSex" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<field property="studentClass"
+				depends="required,maxlength">
+				<arg key="student.studentClass" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>10</var-value>
+				</var>
+			</field>
+			<field property="studentPhone"
+				depends="required,maxlength">
+				<arg key="student.studentPhone" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+			<field property="studentEmail"
+				depends="required,email,maxlength">
+				<arg key="student.studentEmail" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+		</form>
+
+		<form name="JwyRegistrationForm">
+			<field property="jwy_id" depends="required,maxlength">
+				<arg key="jwy.jwyId" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>10</var-value>
+				</var>
+			</field>
+			<field property="jwy_password"
+				depends="required,maxlength">
+				<arg key="jwy.jwyPassword" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+		</form>
+
+		<form name="JwyInfoModifyForm">
+			<field property="adminId" depends="required,maxlength">
+				<arg key="jwy.jwyId" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>10</var-value>
+				</var>
+			</field>
+			<field property="adminPassword"
+				depends="required,maxlength">
+				<arg key="jwy.jwyPassword" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+		</form>
+		<form name="AddNotesForm">
+			<field property="newsName" depends="required,maxlength">
+				<arg key="news.newsName" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>100</var-value>
+				</var>
+			</field>
+			<field property="news" depends="required">
+				<arg key="news.news" />
+			</field>
+			<field property="majorName" depends="required,maxlength">
+				<arg key="news.majorName" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+		</form>
+		<form name="AdmInfoModifyForm">
+
+			<field property="newPassword"
+				depends="required,maxlength">
+				<arg key="admin.newPassword" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+
+			<field property="oldPassword"
+				depends="required,maxlength">
+				<arg key="admin.oldPassword" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+
+			<field property="confirmPassword"
+				depends="required,maxlength,validwhen">
+				<msg name="validwhen" key="error.notMatch"/>
+				<arg key="admin.confirmPassword" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+				<var>
+					<var-name>test</var-name>
+					<var-value>((newPassword!=null)and(*this*==newPassword))</var-value>
+				</var>
+			</field>
+		</form>
+
+		<form name="AddNewSubjectForm">
+			
+			<field property="subject" depends="required,maxlength">
+			<arg key="admin.subject"/>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>100</var-value>
+				</var>
+			</field>
+		</form>
+
+		<form name="StuPswModForm">
+
+			<field property="newPsw" depends="required,maxlength">
+				<arg key="student.newPsw" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+
+			<field property="oldPsw" depends="required,maxlength">
+				<arg key="student.oldPsw" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+
+			<field property="confirmPsw" depends="required,maxlength">
+				<arg key="student.confirmPsw" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+		</form>
+		<form name="StuInfoModForm">
+			<field property="studentId" depends="required,maxlength">
+				<arg key="student.studentId" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>10</var-value>
+				</var>
+
+			</field>
+
+			<field property="studentPhone"
+				depends="required,maxlength">
+				<arg key="student.studentPhone" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>10</var-value>
+				</var>
+			</field>
+
+			<field property="studentEmail"
+				depends="required,email,maxlength">
+				<arg key="student.studentEmail" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+		</form>
+
+		<form name="AddOpeningPortForm">
+			<field property="content" depends="required">
+				<arg key="openingReport.content" />
+			</field>
+		</form>
+	</formset>
+
+</form-validation>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+>
+    <class
+        name="org.chd.entity.OpeningReport"
+        table="OpeningReport"
+    >
+
+        <id
+            name="studentId"
+            column="StudentId"
+            type="java.lang.String"
+        >
+            <generator class="assigned">
+            </generator>
+        </id>
+
+        <property
+            name="content"
+            type="java.lang.String"
+            column="Content"
+        />
+
+        <property
+            name="addDate"
+            type="java.sql.Date"
+            column="AddDate"
+        />
+    </class>
+
+</hibernate-mapping>

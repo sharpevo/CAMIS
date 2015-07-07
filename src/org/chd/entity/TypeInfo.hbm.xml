@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+>
+    <class
+        name="org.chd.entity.TypeInfo"
+        table="Type"
+    >
+
+        <id
+            name="typeId"
+            column="TypeId"
+            type="java.lang.Integer"
+        >
+            <generator class="native">
+              <!--  
+                  To add non XDoclet generator parameters, create a file named 
+                  hibernate-generator-params-TypeInfo.xml 
+                  containing the additional parameters and place it in your merge dir. 
+              --> 
+            </generator>
+        </id>
+
+        <property
+            name="type"
+            type="java.lang.String"
+            column="Type"
+            length="20"
+            not-null="true"
+        />
+    </class>
+
+</hibernate-mapping>

@@ -1,0 +1,23 @@
+<%@ page language="java"  pageEncoding="GBK" %>
+<div id="header">
+			<table cellspacing='0' cellspacing='0' class="tablepos">
+	<tr><td width="100%"><img src='../images/template50_r2_c1.jpg' alt='logo' /></td>		
+	</tr>
+</table>	
+</div>
+
+<div id="globalnav">
+
+<li><a href='index.jsp'>首页</a></li>
+<li><a href=''>Java文栏</a></li>
+<li><a href=''>业界新闻</a></li>
+
+<li><a href=''>资源下载</a></li>
+
+
+</div>
+
+<div id="topbar">
+	
+
+</div>

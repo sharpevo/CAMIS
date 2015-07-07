@@ -1,0 +1,120 @@
+.Domicile {
+	MARGIN-TOP: 10px
+}
+.DealerLogo {
+	MARGIN-BOTTOM: 10px
+}
+#MainFirstRow {
+	MARGIN-TOP: 86px; HEIGHT: 330px; TEXT-ALIGN: center
+}
+.TwoCols {
+	PADDING-RIGHT: 5px; BORDER-TOP: #b6cdef 1px solid; PADDING-LEFT: 5px; PADDING-BOTTOM: 15px; PADDING-TOP: 10px
+}
+.OneColLeft {
+	BORDER-RIGHT: #b6cdef 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #b6cdef 1px solid; PADDING-LEFT: 12px; FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#FFFFFF', endColorStr='#eeeeee', gradientType='1'); FLOAT: left; PADDING-BOTTOM: 15px; BORDER-LEFT: #b6cdef 1px solid; WIDTH: 45%; PADDING-TOP: 10px; BORDER-BOTTOM: #b6cdef 1px solid
+}
+.OneColRight {
+	BORDER-RIGHT: #b6cdef 1px solid; PADDING-RIGHT: 12px; BORDER-TOP: #b6cdef 1px solid; PADDING-LEFT: 10px; FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#FFFFFF', endColorStr='#eeeeee', gradientType='1'); FLOAT: right; PADDING-BOTTOM: 15px; BORDER-LEFT: #b6cdef 1px solid; WIDTH: 45%; PADDING-TOP: 10px; BORDER-BOTTOM: #b6cdef 1px solid
+}
+P.start {
+	FONT-SIZE: 9pt
+}
+#MainTable {
+	BORDER-RIGHT: #888888 1px solid; BORDER-TOP: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; WIDTH: 996px; BORDER-BOTTOM: #888888 1px solid; HEIGHT: 98%
+}
+#Header {
+	PADDING-RIGHT: 20px; BACKGROUND-IMAGE: url(../images/header.gif); COLOR: white; BACKGROUND-REPEAT: repeat-y; HEIGHT: 30px; BACKGROUND-COLOR: #0035a0; TEXT-ALIGN: right
+}
+#HeaderSmall {
+	PADDING-RIGHT: 20px; BACKGROUND-IMAGE: url(../images/header_small.gif); BACKGROUND-REPEAT: repeat-y; HEIGHT: 20px; BACKGROUND-COLOR: #ffcc00; TEXT-ALIGN: right
+}
+#LeftColumn {
+	VERTICAL-ALIGN: top; WIDTH: 160px; PADDING-TOP: 37px; BACKGROUND-COLOR: #e0e0e0
+}
+#Logo {
+	MARGIN-BOTTOM: 37px; WIDTH: auto; TEXT-ALIGN: center
+}
+#MobileLogo {
+	MARGIN-TOP: 30px; WIDTH: auto; TEXT-ALIGN: center
+}
+#MJLogo {
+	MARGIN-TOP: 30px; PADDING-LEFT: 20px; WIDTH: auto
+}
+#PoweredLogo {
+	WIDTH: auto
+}
+#Main {
+	PADDING-RIGHT: 30px; BACKGROUND-POSITION: 30px 6px; PADDING-LEFT: 30px; BACKGROUND-IMAGE: url(../images/arc_top.jpg); PADDING-BOTTOM: 30px; VERTICAL-ALIGN: top; WIDTH: 654px; PADDING-TOP: 10px; BACKGROUND-REPEAT: no-repeat; HEIGHT: auto; BACKGROUND-COLOR: #ffffff
+}
+#RightColumn {
+	VERTICAL-ALIGN: top; WIDTH: 170px; PADDING-TOP: 37px; BACKGROUND-COLOR: #e0e0e0; TEXT-ALIGN: center
+}
+.RightImages {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; MARGIN-BOTTOM: 20px
+}
+#RightFooter {
+	PADDING-BOTTOM: 20px; BACKGROUND-COLOR: #e0e0e0; TEXT-ALIGN: center
+}
+#LanguageSelection {
+	MARGIN-BOTTOM: 52px; TEXT-ALIGN: center
+}
+#OtherLanguage {
+	PADDING-LEFT: 20px; MARGIN-BOTTOM: 10px; WIDTH: 100%; TEXT-ALIGN: left
+}
+#INDOORID {
+	PADDING-LEFT: 20px; MARGIN-BOTTOM: 10px; WIDTH: 100%; TEXT-ALIGN: left
+}
+#Footer {
+	BACKGROUND-POSITION: 70px 0px; PADDING-LEFT: 30px; FONT-WEIGHT: bold; FONT-SIZE: 10pt; BACKGROUND-IMAGE: url(../images/arc_bottom.jpg); COLOR: #666666; BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND-REPEAT: no-repeat; HEIGHT: 120px; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: center
+}
+H1.Content {
+	MARGIN-TOP: 80px
+}
+#BCN {
+	MARGIN-TOP: 0px; FONT-SIZE: 8pt; MARGIN-BOTTOM: 10px
+}
+.fstLevel {
+	PADDING-RIGHT: 10px; BORDER-TOP: #cccccc 1px solid; PADDING-LEFT: 20px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; WHITE-SPACE: nowrap
+}
+.secLevel {
+	PADDING-RIGHT: 10px; BORDER-TOP: #cccccc 1px solid; PADDING-LEFT: 20px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; WHITE-SPACE: nowrap
+}
+.thdLevel {
+	PADDING-RIGHT: 10px; BORDER-TOP: #cccccc 1px solid; PADDING-LEFT: 20px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; WHITE-SPACE: nowrap
+}
+.secLevel {
+	PADDING-LEFT: 30px; FONT-SIZE: 11px
+}
+.thdLevel {
+	PADDING-LEFT: 40px; FONT-SIZE: 10px
+}
+#fstActive {
+	BACKGROUND-COLOR: white
+}
+#secActive {
+	BACKGROUND-COLOR: white
+}
+#thdActive {
+	BACKGROUND-COLOR: white
+}
+DIV.ContentItem {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px; FONT-SIZE: 8pt; MARGIN-BOTTOM: 10px; PADDING-BOTTOM: 5px
+}
+IMG.SFImage {
+	FLOAT: left; MARGIN-RIGHT: 10px
+}
+DIV.HintMargin {
+	MARGIN-BOTTOM: 10px; PADDING-BOTTOM: 20px; BORDER-BOTTOM: #dddddd 1px dashed
+}
+TABLE.Hint {
+	BORDER-TOP: #b6cdef 1px solid; MARGIN-TOP: 20px; MARGIN-BOTTOM: 20px; PADDING-TOP: 10px
+}
+TD.HintHeaderRight {
+	BORDER-RIGHT: #aeaeae 1px solid; BORDER-TOP: #aeaeae 1px solid; FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#FFFFFF', endColorStr='#eeeeee', gradientType='1'); BACKGROUND-IMAGE: url(../images/top_edge.gif)
+}
+TD.HintItem {
+	BORDER-RIGHT: #aeaeae 1px solid; PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FONT-SIZE: 9px; FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#FFFFFF', endColorStr='#eeeeee', gradientType='1'); PADDING-BOTTOM: 10px; BORDER-LEFT: #aeaeae 1px solid; PADDING-TOP: 10px; BORDER-BOTTOM: #aeaeae 1px solid; BACKGROUND-COLOR: white
+}
+#DW_BODY {
+	MARGIN-TOP: 80px
+}

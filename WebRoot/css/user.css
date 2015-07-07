@@ -1,0 +1,63 @@
+/*
+user center css
+*/
+
+#user #ul1 {
+	float: left;
+	width: 48%;
+	background: #F7F7F7;
+}
+#user #ul2 {
+	float: left;
+	width: 52%;
+	background: #F7F7F7;
+}
+#user #ul3 {
+	float: left;
+	width: 100%;
+	background: #F7F7F7;
+}
+#user li {
+	list-style: disc url(../image/jt13.gif);
+}
+
+
+
+#register {
+	margin-left: auto;
+	padding: 30px 30px 30px 30px;
+}
+#register #title {
+	background: url(../i/main/reg_top.gif) no-repeat;
+	height: 50px;
+	text-align: left;
+}
+#register table {
+	width: 80%;
+	text-align: left;
+}
+
+
+#login {
+	width: 360px;
+	margin: 50px auto 50px auto;
+}
+
+
+#help {
+	border: 1px solid #0c8dc7;
+}
+#help h1 {
+	text-align: center;
+}
+#help h3 {	
+	background: #C1D0E4;
+	color: #284B78;
+	font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;	
+	font-weight: bold;
+	font-size: x-large;
+	border: 1px solid #CCC;
+	margin: 2px auto 0 auto;
+	padding: 3px 0 3px 23px;
+	width: 95%;
+}

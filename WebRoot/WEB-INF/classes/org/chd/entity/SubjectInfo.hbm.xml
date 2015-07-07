@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+>
+    <class
+        name="org.chd.entity.SubjectInfo"
+        table="Subject"
+    >
+
+        <id
+            name="subjectId"
+            column="SubjectId"
+            type="java.lang.Integer"
+        >
+            <generator class="native">
+              <!--  
+                  To add non XDoclet generator parameters, create a file named 
+                  hibernate-generator-params-SubjectInfo.xml 
+                  containing the additional parameters and place it in your merge dir. 
+              --> 
+            </generator>
+        </id>
+
+        <property
+            name="difficulty"
+            type="java.lang.String"
+            column="Difficulty"
+            length="1"
+        />
+
+        <property
+            name="excellentTag"
+            type="java.lang.Boolean"
+            column="ExcellentTag"
+        />
+
+        <property
+            name="fieldName"
+            type="java.lang.String"
+            column="FieldName"
+            length="50"
+        />
+        
+        <property
+            name="majorName"
+            type="java.lang.String"
+            column="MajorName"
+            length="20"
+        />
+ 
+ 
+       <property
+            name="typeName"
+            type="java.lang.String"
+            column="TypeName"
+            length="50"
+        />
+        
+        <property
+            name="propertyName"
+            type="java.lang.String"
+            column="PropertyName"
+            length="50"
+        />
+
+        <property
+            name="sourceName"
+            type="java.lang.String"
+            column="SourceName"
+            length="50"
+        />
+
+        <property
+            name="studentId"
+            type="java.lang.String"
+            column="StudentId"
+            length="10"
+        />
+
+        <property
+            name="subject"
+            type="java.lang.String"
+            column="Subject"
+            length="100"
+        />
+
+        <property
+            name="teacherAPost"
+            type="java.lang.String"
+            column="TeacherAPost"
+            length="10"
+        />
+
+        <property
+            name="teacherBPost"
+            type="java.lang.String"
+            column="TeacherBPost"
+            length="10"
+        />
+
+        <property
+            name="teacherAId"
+            type="java.lang.String"
+            column="TeacherAId"
+            length="10"
+        />
+        
+        <property
+            name="teacherBId"
+            type="java.lang.String"
+            column="TeacherBId"
+            length="10"
+        />
+      
+        <property
+            name="years"
+            type="java.lang.Integer"
+            column="Years"
+        />
+          
+        <property
+            name="markPY"
+            type="java.lang.Float"
+            column="MarkPY"
+        />
+        
+          <property
+            name="markZD"
+            type="java.lang.Float"
+            column="MarkZD"
+        />
+        
+          <property
+            name="markDB"
+            type="java.lang.Float"
+            column="MarkDB"
+        />
+        
+          <property
+            name="mark"
+            type="java.lang.Float"
+            column="Mark"
+        />
+        
+         <property
+            name="markGrade"
+            type="java.lang.String"
+            column="MarkGrade"
+            length="4"
+        />
+        
+        <property
+            name="introduction"
+            type="java.lang.String"
+            column="Introduction"
+            length="200"
+        />
+    </class>
+
+</hibernate-mapping>

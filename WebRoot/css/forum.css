@@ -1,0 +1,91 @@
+/*
+forum / topic / thread css
+*/
+#forum {
+	margin: 0px;
+	float:left;
+	font-family: sans-serif, ÐÂËÎÌå;
+	font-size: 11px;
+	word-spacing: 0.2em;
+}
+
+#forum table {
+	margin: 0 5px 10px 5px;
+	table-layout: fixed;
+	word-wrap: break-word;
+}
+
+#forumname {
+	float: left;
+	text-align: center;
+	border-right: 1px solid #0c8dc7;
+	width: 44%;
+}
+
+#forumpower {
+	color: red;
+	float: left;
+	padding-top: 2px;
+	text-align: center;
+	width: 14%;
+}
+
+#forumtopic {
+	color: red;
+	float: left;
+	padding-left: 10px;
+	width: 10%;
+}
+
+#forumpost {
+	color: red;
+	float: left;
+	padding-left: 10px;
+	width: 10%;
+}
+
+#forumrss img {
+	padding-top: 2px;
+}
+
+#forumnew {
+	float: right;
+}
+#leftcontent {
+	float: left;
+	width: 29%;
+	margin: 0;
+	background-color: #F6F6F4;
+	border-right: 1px solid #CCCCCC;
+}
+#rightcontent {
+	float: right;
+	width: 70%;
+	padding-left: 0px;
+	background-color: #F6F6F4;
+	border-left: 1px solid #CCCCCC;
+}
+
+#divnormal {
+	width: 98%;
+	margin: 5px 0 5px 10px;
+}
+
+#divcenter {
+	width: 90%;
+	text-align: center;
+}
+#topic table th {
+	background: #F6F6F4;
+	color: #284B78;
+	font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	border: 1px solid #CCC;
+}
+.thread-li li {
+	margin-left: 5px;
+	padding: 0;
+	list-style: none outside none;
+}
+}

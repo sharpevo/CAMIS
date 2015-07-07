@@ -1,0 +1,174 @@
+HTML {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 11px; BACKGROUND: #ffffff; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 10px; LINE-HEIGHT: 14px; PADDING-TOP: 0px; FONT-FAMILY: "Trebuchet MS", Arial, sans-serif
+}
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 11px; BACKGROUND: #ffffff; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 10px; LINE-HEIGHT: 14px; PADDING-TOP: 0px; FONT-FAMILY: "Trebuchet MS", Arial, sans-serif
+}
+A:link {
+	COLOR: #336699
+}
+A:visited {
+	COLOR: #336699
+}
+A:hover {
+	COLOR: #3399ff
+}
+A:active {
+	COLOR: #3399ff
+}
+DIV.nav A:link {
+	TEXT-DECORATION: none
+}
+DIV.nav A:visited {
+	TEXT-DECORATION: none
+}
+DIV.nav A:hover {
+	TEXT-DECORATION: none
+}
+DIV.nav A:active {
+	TEXT-DECORATION: none
+}
+TABLE {
+	BORDER-RIGHT: 0px; TABLE-LAYOUT: auto; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: 0px; PADDING-TOP: 0px; BORDER-BOTTOM: 0px
+}
+TD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.content {
+	PADDING-RIGHT: 14px; PADDING-LEFT: 14px; PADDING-BOTTOM: 14px; LINE-HEIGHT: 125%; PADDING-TOP: 14px; text-size: 11px
+}
+.toph {
+	FONT-SIZE: 18px; VERTICAL-ALIGN: middle; COLOR: #ffffff; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica
+}
+.navbig {
+	BORDER-TOP-WIDTH: 0px; BORDER-RIGHT: #cccccc 1px solid; PADDING-LEFT: 13px; FONT-WEIGHT: bold; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 11px; PADDING-BOTTOM: 5px; COLOR: #336699; PADDING-TOP: 5px; BORDER-BOTTOM: #cccccc 1px solid; HEIGHT: 22px; BACKGROUND-COLOR: #ebebeb
+}
+.navother {
+	BORDER-TOP-WIDTH: 0px; BORDER-RIGHT: #cccccc 1px solid; PADDING-LEFT: 13px; FONT-WEIGHT: bold; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 11px; PADDING-BOTTOM: 5px; COLOR: #336699; PADDING-TOP: 5px; BORDER-BOTTOM: #cccccc 1px solid; HEIGHT: 22px; BACKGROUND-COLOR: #f7f7f7
+}
+.navsmall {
+	BORDER-TOP-WIDTH: 0px; BORDER-RIGHT: #cccccc 1px solid; PADDING-LEFT: 30px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 11px; PADDING-BOTTOM: 5px; COLOR: #336699; PADDING-TOP: 5px; BORDER-BOTTOM: #cccccc 1px solid; HEIGHT: 22px; BACKGROUND-COLOR: #ebebeb
+}
+.navdiv {
+	BORDER-RIGHT: #cccccc 1px solid; HEIGHT: 3px; BACKGROUND-COLOR: #cccccc
+}
+.navon {
+	BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND-COLOR: #cccccc
+}
+.navoff {
+	BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND-COLOR: #ebebeb
+}
+.navofflt {
+	BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND-COLOR: #f7f7f7
+}
+.modhead {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 6px; FONT-WEIGHT: bold; FONT-SIZE: 13px; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #ffffff; PADDING-TOP: 0px; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-SPACE: nowrap; BACKGROUND-COLOR: #336699
+}
+.modbod {
+	BORDER-RIGHT: #cccccc 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #cccccc 1px solid; PADDING-LEFT: 10px; FONT-SIZE: 11px; PADDING-BOTTOM: 10px; BORDER-LEFT: #cccccc 1px solid; LINE-HEIGHT: 14px; PADDING-TOP: 10px; BORDER-BOTTOM: #cccccc 1px solid
+}
+.contentcat {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; BORDER-BOTTOM: #cccccc 1px solid
+}
+.contentcattitle {
+	BORDER-RIGHT: #cccccc 1px solid; PADDING-RIGHT: 2px; PADDING-LEFT: 2px; FONT-SIZE: 11px; PADDING-BOTTOM: 2px; BORDER-LEFT: #cccccc 1px solid; COLOR: #ffffff; PADDING-TOP: 2px; BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND-COLOR: #000000; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+.navhere {
+	FONT-WEIGHT: bold; COLOR: #000000
+}
+.searchbox {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FONT-SIZE: 10px; PADDING-BOTTOM: 10px; MARGIN: 0px; WIDTH: 200px; COLOR: #000000; LINE-HEIGHT: 14px; PADDING-TOP: 10px; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica
+}
+.footer {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; FONT-SIZE: 11px; PADDING-BOTTOM: 4px; PADDING-TOP: 4px; TEXT-ALIGN: center
+}
+.searchbutton {
+	MARGIN-TOP: 2px; MARGIN-BOTTOM: 2px
+}
+.catspace {
+	LINE-HEIGHT: 14px
+}
+.trl {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.cheadbig {
+	PADDING-RIGHT: 17px; FONT-SIZE: 18px; MARGIN: 0px; VERTICAL-ALIGN: top; COLOR: #666666; PADDING-TOP: 0px; FONT-FAMILY: "Trebuchet MS", Arial, Helvetica; TEXT-ALIGN: right
+}
+.cheadmenu {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px; FONT-WEIGHT: bold; FONT-SIZE: 10px; VERTICAL-ALIGN: middle; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; WHITE-SPACE: nowrap; TEXT-ALIGN: center; TEXT-DECORATION: underline
+}
+.majorheader {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; WIDTH: 100%; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.kbpic {
+	BORDER-RIGHT: #336699 1px solid; BORDER-TOP: #336699 1px solid; MARGIN: 10px 10px 10px 24px; BORDER-LEFT: #336699 1px solid; COLOR: #003366; BORDER-BOTTOM: #336699 1px solid
+}
+.kbpic_nb {
+	MARGIN: 10px 10px 10px 24px
+}
+.gw {
+	FONT-SIZE: 12px; COLOR: #ffffff; TEXT-DECORATION: none
+}
+.minorheader {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px
+}
+.blueminorheader {
+	FONT-SIZE: 13px
+}
+.formelements {
+	FONT-SIZE: 13px
+}
+.genspaced {
+	FONT-SIZE: 13px; LINE-HEIGHT: 20px
+}
+.gensmall {
+	FONT-WEIGHT: normal; FONT-SIZE: 9px
+}
+.linkfaq {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #003366; TEXT-DECORATION: none
+}
+.topheader {
+	BACKGROUND: url(/images/clients/real_gam/back_generic.gif) #5ea3d1
+}
+.pagetitle {
+	PADDING-LEFT: 5px; FONT-WEIGHT: normal; FONT-SIZE: 14pt; VERTICAL-ALIGN: middle; COLOR: white
+}
+.summary {
+	
+}
+.navigator {
+	TEXT-ALIGN: right
+}
+.detail {
+	MARGIN: 15px
+}
+.list {
+	MARGIN: 30px
+}
+.example {
+	MARGIN: 45px
+}
+.head1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; WIDTH: 100%; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.head2 {
+	FONT-WEIGHT: bold
+}
+.title {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; WIDTH: 100%; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+H1 {
+	FONT-SIZE: 22px; COLOR: #fff; FONT-FAMILY: Arial,sans-serif
+}
+H2 {
+	PADDING-RIGHT: 2px; FONT-SIZE: 14px; LEFT: 6px; MARGIN: 0px; COLOR: #fff; FONT-FAMILY: Arial, sans-serif; POSITION: relative; TOP: 2px
+}
+H4 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H5 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: normal; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #ccc; PADDING-TOP: 0px
+}
+H6 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #ccc; PADDING-TOP: 0px
+}

@@ -1,0 +1,315 @@
+.Domicile{margin-top:10px;}
+.DealerLogo{margin-bottom:10px;}
+
+
+/*Nur für Titelbild auf der Startseite*/
+#MainFirstRow
+{
+	margin-top:86px;
+	/*background-image: url('../images/title_de.jpg');
+	background-position:center;
+	background-repeat:no-repeat;*/
+	text-align:center;
+	height: 330px;
+}
+/*Text auf der Startseite*/
+.TwoCols
+{
+	border-top: solid 1px #b6cdef;
+	padding-top: 10px;
+	padding-bottom: 15px;
+	padding-left:5px;
+	padding-right:5px;
+}
+
+/*Linke Spalte Startseite*/
+.OneColLeft
+{
+	border: solid 1px #b6cdef;
+	width:45%;
+	float: left;
+	padding-top: 10px;
+	padding-bottom: 15px;
+	padding-left:12px;
+	padding-right:10px;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#FFFFFF', endColorStr='#eeeeee', gradientType='1');
+
+}
+
+/*Rechte Spalte Startseite*/
+.OneColRight
+{
+	border: solid 1px #b6cdef;
+	width: 45%;
+	float: right;
+	padding-top: 10px;
+	padding-bottom: 15px;
+	padding-left:10px;
+	padding-right:12px;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#FFFFFF', endColorStr='#eeeeee', gradientType='1');
+}
+
+p.start
+{ font-size: 9pt;}
+
+
+#MainTable
+{
+	border-top: solid 1px #cccccc;
+	border-left: solid 1px #cccccc;
+	border-right: solid 1px #888888;
+	border-bottom: solid 1px #888888;
+	width:996px;
+	height: 98%;
+}
+
+
+
+/*Globale Navigation*/
+#Header
+{
+	background-image: url('../images/header.gif');
+	height:30px;
+	color:White;
+	background-repeat: repeat-y;
+	background-color:#0035a0;
+	/*border-bottom: solid 1px #cccccc;*/
+	text-align: right;
+	padding-right: 20px;
+	text-align:right;
+}
+
+/*Darstellung der Administratationsleiste, falls vorhanden*/
+#HeaderSmall
+{
+	background-image: url('../images/header_small.gif');
+	height:20px;
+	/*border-bottom: solid 1px #cccccc;*/
+	background-repeat:repeat-y;
+	background-color: #ffcc00;
+	text-align:right;
+	padding-right: 20px;
+}
+#LeftColumn
+{
+	background-color:#e0e0e0;
+	width: 160px;
+	vertical-align:top;
+	padding-top:37px;
+	
+}
+
+
+#Logo
+{
+	width: auto;
+	margin-bottom: 37px;
+	/*padding-left:20px;*/
+	text-align: center;
+}
+
+#MobileLogo
+{
+	width: auto;
+	margin-top:30px;
+	text-align: center;
+}
+#MJLogo
+{
+	width: auto;
+	margin-top: 30px;
+	padding-left:20px;
+}
+
+#PoweredLogo
+{
+	width: auto;
+}
+
+
+#Main
+{
+	background-image: url('../images/arc_top.jpg');
+	background-position:30px 6px;
+	background-repeat:no-repeat;
+	background-color: #ffffff;
+	/*background-image:url('../images/bg_main.gif');
+	background-repeat: repeat-x;*/
+	padding: 30px;
+	padding-top:10px;
+	width:654px;
+	vertical-align:top;
+	height: auto;
+}
+
+
+#RightColumn
+{
+	background-color:#e0e0e0;
+	padding-top:37px;
+	width:170px;
+	vertical-align:top;
+	text-align:center;
+}
+.RightImages
+{
+	margin-bottom:20px;
+	font-size:10px;
+	font-weight:normal;
+}
+#RightFooter
+{
+	background-color:#e0e0e0;
+	text-align:center;
+	padding-bottom:20px;
+}
+#LanguageSelection
+{
+	text-align:center;
+	margin-bottom: 52px;
+}
+
+#OtherLanguage
+{
+	width: 100%;
+	text-align:left;
+	padding-left:20px;
+	margin-bottom:10px;
+}
+
+#INDOORID
+{
+	width: 100%;
+	text-align:left;
+	padding-left:20px;
+	margin-bottom:10px;
+}
+
+
+
+
+#Footer
+{
+	background-image: url('../images/arc_bottom.jpg');
+	background-position:70px 0px;
+	background-repeat:no-repeat;
+	background-color: #ffffff;
+	border-bottom: solid 1px #cccccc;
+	height:120px;
+	padding-left:30px;
+	font-size:10pt;
+	font-weight:bold;
+	color:#666666;
+	text-align: center;
+		
+}
+
+/*Inhaltsüberschrift eines Verzeichnisses*/
+h1.Content
+{
+	margin-top:80px;
+}
+
+
+/*BreadCrumbNavigation*/	
+#BCN
+{
+	margin-bottom:10px;
+	margin-top:0px;
+	font-size: 8pt;
+}
+
+
+
+/*Verschieden Klassen und IDs für die linke Navigation*/
+.fstLevel, .secLevel, .thdLevel
+{
+	border-top: solid 1px #cccccc;
+	padding-left:20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right:10px;
+	white-space:nowrap;
+}
+.secLevel
+{	padding-left:30px;font-size:11px;}
+.thdLevel
+{	padding-left:40px;font-size:10px}
+
+#fstActive
+{ background-color:White;}
+#secActive
+{ background-color:White;}
+#thdActive
+{ background-color:White;}
+
+/*Ende Klassen und IDs für Navigation*/
+
+
+/***********************Verzeichnisse***********************************************/
+div.ContentItem
+{
+	padding-bottom: 5px;
+	padding-left:6px;
+	padding-right: 6px;
+	margin-bottom: 10px;
+	font-size:8pt;
+}
+
+/* Thumbnail eines Bildes aus dem Unterverzeichnis */
+img.SFImage
+{
+	float: left;
+	margin-right:10px;
+}
+
+
+/***************************Links, URLs, Downloads**********************************/
+div.HintMargin
+{
+	margin-bottom: 10px;
+	border-bottom: dashed 1px #dddddd;
+	padding-bottom: 20px;
+}
+
+table.Hint
+{
+	/*background-color:White;*/
+	padding-top:10px;
+	margin-top:	20px;
+	margin-bottom:20px;
+	border-top: solid 1px #b6cdef;
+}
+
+td.HintHeaderRight
+{
+	border-right:solid 1px #aeaeae;
+	border-top: solid 1px #aeaeae;
+	background-image:url('../images/top_edge.gif');
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#FFFFFF', endColorStr='#eeeeee', gradientType='1');
+
+}
+td.HintItem
+{
+	/*FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#FFFFFF', endColorStr='#fbe9d5', gradientType='1');*/
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#FFFFFF', endColorStr='#eeeeee', gradientType='1');
+	background-color:white;
+	border-left:solid 1px #aeaeae;
+	border-right:solid 1px #aeaeae;
+	border-bottom:solid 1px #aeaeae;
+	padding: 10px;
+	font-size: 9px;
+}
+/***************************Links, URLs, Downloads**********************************/
+
+
+/*Nur Dokumente*/
+#DW_BODY
+{	margin-top:80px}
+
+
+
+
+
+
+

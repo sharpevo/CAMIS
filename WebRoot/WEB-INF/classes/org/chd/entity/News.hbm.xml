@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+>
+    <class
+        name="org.chd.entity.News"
+        table="News"
+    >
+
+        <id
+            name="newsId"
+            column="newsId"
+            type="java.lang.Integer"       
+        >
+            <generator class="native">
+              <!--  
+                  To add non XDoclet generator parameters, create a file named 
+                  hibernate-generator-params-StudentInfo.xml 
+                  containing the additional parameters and place it in your merge dir. 
+              --> 
+            </generator>
+        </id>
+
+        <property
+            name="newsName"
+            type="java.lang.String"
+            column="newsName"
+            length="100"
+        />
+         
+        <property
+            name="news"
+            type="java.lang.String"
+            column="News"
+            length="50"
+        />
+
+        <property
+            name="addDate"
+            type="java.sql.Date"
+            column="AddDate"
+        />
+
+        <property
+            name="majorName"
+            type="java.lang.String"
+            column="majorName"
+            length="10"
+        />
+
+    </class>
+
+</hibernate-mapping>

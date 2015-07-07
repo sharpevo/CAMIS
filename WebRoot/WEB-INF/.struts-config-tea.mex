@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/welcomeView.do" location="1389,736" dimension="280,84" />
+  <StrutsActivity path="/teaEntry.do" location="1386,552" dimension="286,84" />
+  <StrutsActivity path="/zdPreView.do" location="1108,1785" dimension="280,84" />
+  <StrutsActivity path="/zdScoreView.do" location="1108,1233" dimension="280,84" />
+  <StrutsActivity path="/zdPre.do" location="1114,1601" dimension="268,84" />
+  <StrutsActivity path="/zdGet.do" location="1114,1049" dimension="268,84" />
+  <StrutsActivity path="/zdScore.do" location="1108,1417" dimension="280,84" />
+  <StrutsActivity path="/pyPreView.do" location="178,0" dimension="280,84" />
+  <StrutsActivity path="/pyGetView.do" location="94,552" dimension="280,84" />
+  <StrutsActivity path="/pyPre.do" location="185,920" dimension="268,84" />
+  <StrutsActivity path="/examinePY.do" location="0,368" dimension="292,84" />
+  <StrutsActivity path="/pyGet.do" location="100,184" dimension="268,84" />
+  <StrutsActivity path="/py.do" location="109,736" dimension="250,84" />
+  <StrutsActivity path="/psPreView.do" location="1433,1785" dimension="280,84" />
+  <StrutsActivity path="/psGetView.do" location="1433,1233" dimension="280,84" />
+  <StrutsActivity path="/psPre.do" location="1439,1601" dimension="268,84" />
+  <StrutsActivity path="/psGet.do" location="1439,1049" dimension="268,84" />
+  <StrutsActivity path="/ps.do" location="1448,1417" dimension="250,84" />
+  <StrutsActivity path="/dbPreView.do" location="681,0" dimension="280,84" />
+  <StrutsActivity path="/dbView.do" location="597,552" dimension="280,84" />
+  <StrutsActivity path="/dbPre.do" location="688,920" dimension="268,84" />
+  <StrutsActivity path="/examineDB.do" location="503,368" dimension="292,84" />
+  <StrutsActivity path="/dbGet.do" location="603,184" dimension="268,84" />
+  <StrutsActivity path="/db.do" location="612,736" dimension="250,84" />
+  <StrutsActivity path="/teaInfoView.do" location="214,1785" dimension="280,84" />
+  <StrutsActivity path="/editTeaPasswordView.do" location="416,1233" dimension="280,84" />
+  <StrutsActivity path="/editTeaPropertyView.do" location="12,1233" dimension="280,84" />
+  <StrutsActivity path="/teaInfo.do" location="214,1601" dimension="280,84" />
+  <StrutsActivity path="/modifyTea.do" location="6,1049" dimension="292,84" />
+  <StrutsActivity path="/modifyPSW.do" location="410,1049" dimension="292,84" />
+  <StrutsActivity path="/editTeaProperty.do" location="0,1417" dimension="304,84" />
+  <StrutsActivity path="/editTeaPassword.do" location="404,1417" dimension="304,84" />
+  <StrutsActivity path="/reportListView.do" location="768,1785" dimension="280,84" />
+  <StrutsActivity path="/reportDetailView.do" location="15,2098" dimension="280,84" />
+  <StrutsActivity path="/writeMailView.do" location="768,1233" dimension="280,84" />
+  <StrutsActivity path="/censorReport.do" location="753,1601" dimension="310,84" />
+  <StrutsActivity path="/reportDetail.do" location="0,1914" dimension="310,84" />
+  <StrutsActivity path="/writeMail.do" location="762,1049" dimension="292,84" />
+  <StrutsActivity path="/sendMail.do" location="765,1417" dimension="286,84" />
+  <StrutsActivity path="/fillSUBView.do" location="1161,184" dimension="280,84" />
+  <StrutsActivity path="/reviewSUBView.do" location="1006,552" dimension="280,84" />
+  <StrutsActivity path="/fillREQView.do" location="1616,184" dimension="280,84" />
+  <StrutsActivity path="/reviewREQView.do" location="1772,552" dimension="280,84" />
+  <StrutsActivity path="/showMySubView.do" location="1978,1417" dimension="280,84" />
+  <StrutsActivity path="/subPre.do" location="1164,0" dimension="274,84" />
+  <StrutsActivity path="/reqPre.do" location="1619,0" dimension="274,84" />
+  <StrutsActivity path="/deleteSubject.do" location="1758,1049" dimension="304,84" />
+  <StrutsActivity path="/deleteRequirement.do" location="2162,1049" dimension="328,84" />
+  <StrutsActivity path="/subjectInfo.do" location="1149,368" dimension="304,84" />
+  <StrutsActivity path="/requirementInfo.do" location="1592,368" dimension="328,84" />
+  <StrutsActivity path="/showMySub.do" location="1972,1233" dimension="292,84" />
+  <StrutsActivity path="/showAllSubView.do" location="364,2098" dimension="280,84" />
+  <StrutsActivity path="/skimSubView.do" location="698,2098" dimension="280,84" />
+  <StrutsActivity path="/skimTeaView.do" location="1023,2098" dimension="280,84" />
+  <StrutsActivity path="/showAllSub.do" location="355,1914" dimension="298,84" />
+  <StrutsActivity path="/skimSub.do" location="698,1914" dimension="280,84" />
+  <StrutsActivity path="/skimTea.do" location="1023,1914" dimension="280,84" />
+  <StrutsActivity path="failure;6" location="1517,1914" dimension="106,72" />
+  <StrutsActivity path="illegalAccess;6" location="1348,1914" dimension="124,72" />
+  <StrutsActivity path="teaEntry;6" location="1850,850" dimension="101,75" />
+  <StrutsActivity path="/logout.do" location="2150,750" dimension="89,75" />
+  <StrutsActivity path="/error.jsp" location="1520,2086" dimension="100,48" />
+  <StrutsActivity path="/warning.jsp" location="1354,2086" dimension="112,48" />
+  <StrutsActivity path="" location="50,950" dimension="29,49" />
+  <StrutsActivity path="illegalRole;6" />
+  <StrutsTransition id="/requirementInfo.do,cancel,/teaEntry.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1657,452" />
+      <AbsolutePoint location="1657,552" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pyPreView.do,null,/pyGet.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="318,84" />
+      <AbsolutePoint location="318,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/teaEntry.do,dbPre,/dbPre.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1386,594" />
+      <AbsolutePoint location="1331,594" />
+      <AbsolutePoint location="1331,962" />
+      <AbsolutePoint location="956,962" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/teaEntry.do,showAllSub,/showAllSub.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1469,636" />
+      <AbsolutePoint location="1469,651" />
+      <AbsolutePoint location="-75,651" />
+      <AbsolutePoint location="-75,1730" />
+      <AbsolutePoint location="509,1730" />
+      <AbsolutePoint location="509,1914" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/teaEntry.do,suc,/welcomeView.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1559,636" />
+      <AbsolutePoint location="1559,736" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dbPreView.do,null,/dbGet.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="821,84" />
+      <AbsolutePoint location="821,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pyGet.do,beScored,/examinePY.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="234,268" />
+      <AbsolutePoint location="234,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pyGet.do,suc,/pyGetView.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="307,268" />
+      <AbsolutePoint location="307,552" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/writeMail.do,suc,/writeMailView.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="908,1133" />
+      <AbsolutePoint location="908,1233" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/censorReport.do,suc,/reportListView.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="908,1685" />
+      <AbsolutePoint location="908,1785" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/subjectInfo.do,suc,/reviewSUBView.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1271,452" />
+      <AbsolutePoint location="1271,552" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="illegalAccess;6,null,/warning.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1410,1986" />
+      <AbsolutePoint location="1410,2086" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pyGetView.do,null,/py.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="234,636" />
+      <AbsolutePoint location="234,736" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/teaInfo.do,suc,/teaInfoView.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="354,1685" />
+      <AbsolutePoint location="354,1785" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zdScoreView.do,null,/zdScore.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1248,1317" />
+      <AbsolutePoint location="1248,1417" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/teaEntry.do,psPre,/psPre.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1589,636" />
+      <AbsolutePoint location="1589,711" />
+      <AbsolutePoint location="2565,711" />
+      <AbsolutePoint location="2565,1643" />
+      <AbsolutePoint location="1707,1643" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/teaEntry.do,teaInfo,/teaInfo.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1529,552" />
+      <AbsolutePoint location="1529,497" />
+      <AbsolutePoint location="-45,497" />
+      <AbsolutePoint location="-45,1643" />
+      <AbsolutePoint location="214,1643" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/teaEntry.do,logout,/logout.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1672,594" />
+      <AbsolutePoint location="1687,594" />
+      <AbsolutePoint location="1687,787" />
+      <AbsolutePoint location="2150,787" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dbPre.do,illegal,/teaEntry.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="822,962" />
+      <AbsolutePoint location="1529,594" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/examineDB.do,suc,/dbView.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="649,452" />
+      <AbsolutePoint location="649,552" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/teaEntry.do,zdPre,/zdPre.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1672,564" />
+      <AbsolutePoint location="1728,564" />
+      <AbsolutePoint location="1728,1546" />
+      <AbsolutePoint location="1278,1546" />
+      <AbsolutePoint location="1278,1601" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zdPre.do,suc,/zdPreView.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1248,1685" />
+      <AbsolutePoint location="1248,1785" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zdGet.do,suc,/zdScoreView.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1248,1133" />
+      <AbsolutePoint location="1248,1233" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dbPre.do,suc,/dbPreView.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="892,920" />
+      <AbsolutePoint location="892,84" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/editTeaPassword.do,suc,/teaInfo.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="479,1501" />
+      <AbsolutePoint location="479,1601" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/reportDetail.do,suc,/reportDetailView.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="155,1998" />
+      <AbsolutePoint location="155,2098" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/db.do,suc,/dbPre.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="737,820" />
+      <AbsolutePoint location="737,920" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ps.do,suc,/psPre.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1573,1501" />
+      <AbsolutePoint location="1573,1601" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/writeMailView.do,null,/sendMail.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="908,1317" />
+      <AbsolutePoint location="908,1417" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dbGet.do,suc,/dbView.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="810,268" />
+      <AbsolutePoint location="810,552" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/sendMail.do,suc,/censorReport.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="908,1501" />
+      <AbsolutePoint location="908,1601" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/teaEntry.do,pyPre,/pyPre.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1499,636" />
+      <AbsolutePoint location="1499,681" />
+      <AbsolutePoint location="419,681" />
+      <AbsolutePoint location="419,920" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showAllSub.do,suc,/showAllSubView.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="534,1998" />
+      <AbsolutePoint location="534,2098" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/editTeaPropertyView.do,null,/editTeaProperty.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="152,1317" />
+      <AbsolutePoint location="152,1417" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/modifyTea.do,suc,/editTeaPropertyView.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="152,1133" />
+      <AbsolutePoint location="152,1233" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/teaEntry.do,subPre,/subPre.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1559,552" />
+      <AbsolutePoint location="1559,42" />
+      <AbsolutePoint location="1438,42" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="illegalRole;6,null,/teaEntry.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="1529,594" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/teaEntry.do,censorReport,/censorReport.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1529,636" />
+      <AbsolutePoint location="1529,711" />
+      <AbsolutePoint location="1078,711" />
+      <AbsolutePoint location="1078,1643" />
+      <AbsolutePoint location="1063,1643" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/modifyPSW.do,suc,/editTeaPasswordView.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="556,1133" />
+      <AbsolutePoint location="556,1233" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/subPre.do,suc,/fillSUBView.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1301,84" />
+      <AbsolutePoint location="1301,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/skimSub.do,suc,/skimSubView.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="838,1998" />
+      <AbsolutePoint location="838,2098" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dbGet.do,beScored,/examineDB.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="737,268" />
+      <AbsolutePoint location="737,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/psGetView.do,null,/ps.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1573,1317" />
+      <AbsolutePoint location="1573,1417" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dbView.do,null,/db.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="737,636" />
+      <AbsolutePoint location="737,736" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/editTeaPasswordView.do,null,/editTeaPassword.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="556,1317" />
+      <AbsolutePoint location="556,1417" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/skimTea.do,suc,/skimTeaView.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1163,1998" />
+      <AbsolutePoint location="1163,2098" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showAllSub.do,forward,/showAllSubView.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="504,1998" />
+      <AbsolutePoint location="504,2098" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/zdScore.do,suc,/zdPre.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1248,1501" />
+      <AbsolutePoint location="1248,1601" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/deleteSubject.do,suc,/showMySub.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1987,1133" />
+      <AbsolutePoint location="1987,1233" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/psPre.do,suc,/psPreView.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1573,1685" />
+      <AbsolutePoint location="1573,1785" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pyPre.do,suc,/pyPreView.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="389,920" />
+      <AbsolutePoint location="389,84" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/requirementInfo.do,suc,/reviewREQView.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1787,452" />
+      <AbsolutePoint location="1787,552" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/subjectInfo.do,cancel,/teaEntry.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1401,452" />
+      <AbsolutePoint location="1401,552" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/reqPre.do,suc,/fillREQView.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1756,84" />
+      <AbsolutePoint location="1756,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showMySub.do,suc,/showMySubView.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2118,1317" />
+      <AbsolutePoint location="2118,1417" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/editTeaProperty.do,suc,/teaInfo.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="229,1501" />
+      <AbsolutePoint location="229,1601" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fillSUBView.do,null,/subjectInfo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1301,268" />
+      <AbsolutePoint location="1301,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/psGet.do,suc,/psGetView.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1573,1133" />
+      <AbsolutePoint location="1573,1233" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/deleteRequirement.do,suc,/showMySub.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2249,1133" />
+      <AbsolutePoint location="2249,1233" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="failure;6,null,/error.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1570,1986" />
+      <AbsolutePoint location="1570,2086" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/py.do,suc,/pyPre.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="234,820" />
+      <AbsolutePoint location="234,920" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="teaEntry;6,null,/teaEntry.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1900,850" />
+      <AbsolutePoint location="1900,681" />
+      <AbsolutePoint location="1619,681" />
+      <AbsolutePoint location="1619,636" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fillREQView.do,null,/requirementInfo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1756,268" />
+      <AbsolutePoint location="1756,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/teaEntry.do,showMySub,/showMySub.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1649,636" />
+      <AbsolutePoint location="1649,651" />
+      <AbsolutePoint location="2118,651" />
+      <AbsolutePoint location="2118,1233" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/examinePY.do,suc,/pyGetView.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="146,452" />
+      <AbsolutePoint location="146,552" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

@@ -1,0 +1,108 @@
+/*
+links
+*/
+
+/* ==================================================
+	default links 
+	=================================================*/
+a {
+	color: #00659C;
+	text-decoration: none;
+}
+a:link {
+	text-decoration : none;
+	color: #00659C;
+	background: transparent; 
+}
+a:visited {
+	text-decoration : none;
+	color: #00659C;
+	background: transparent;  
+}
+a:hover {
+	text-decoration : underline;
+	color: red;
+	background: transparent; 
+}
+a:focus {
+}
+a:active {
+	color: #00659C;
+	background: transparent;  
+}
+
+/* ===================================================
+	menu links 
+	=================================================*/
+	
+a.menu {
+	color: White;
+	text-decoration: none;
+}
+a.menu:link {
+	text-decoration : none;
+	color: White;
+	background: transparent; 
+}
+a.menu:visited {
+	text-decoration : none;
+	color: White;
+	background: transparent;  
+}
+a.menu:hover {
+	color: #CC3300;
+	text-decoration: underline;
+	background: transparent;  
+}
+
+/* ===================================================
+	wiki link
+	=================================================== */
+a.wiki_link {
+	color: Red;
+	text-decoration: none;
+}
+a.wiki_link:link {
+	text-decoration : none;
+	color: Red;
+	background: transparent; 
+}
+a.wiki_link:visited {
+	text-decoration : none;
+	color: Red;
+	background: transparent;  
+}
+a.wiki_link:hover {
+	color: #CC3300;
+	text-decoration: underline;
+	background: transparent;  
+}
+	
+
+
+/* ===================================================
+	special links
+   ===================================================*/
+	
+a.forumlink:link,a.forumlink:hover,a.forumlink:visited{
+   font-size: 12px;   	
+	border-bottom: 0px;
+}
+
+a.postalert:link,a.postalert:hover,a.postalert:visited{
+	text-decoration : line-through; 
+}
+
+a.hotforum,a.hotforum:link,a.hotforum:hover,a.hotforum:visited{
+	color:red;
+	border-bottom: 1px dashed red;
+}
+
+a.authorlink:link,a.authorlink:hover,a.authorlink:visited{
+   font-size: 10px;   		
+	border-bottom: 1px dashed;
+}
+
+a.topiclink:link,a.topiclink:hover,a.topiclink:visited{
+  	border-bottom: 1px dashed;
+}

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+>
+    <class
+        name="org.chd.entity.TeacherInfo"
+        table="teacher"
+    >
+
+        <id
+            name="teacherId"
+            column="TeacherId"
+            type="java.lang.String"
+            length="10"
+        >
+            <generator class="assigned">
+              <!--  
+                  To add non XDoclet generator parameters, create a file named 
+                  hibernate-generator-params-TeacherInfo.xml 
+                  containing the additional parameters and place it in your merge dir. 
+              --> 
+            </generator>
+        </id>
+
+        <property
+            name="consultTag"
+            type="java.lang.Boolean"
+            column="ConsultTag"
+        />
+
+        <property
+            name="fieldName"
+            type="java.lang.String"
+            column="FieldName"
+            length="50"
+        />
+
+        <property
+            name="post"
+            type="java.lang.String"
+            column="Post"
+            length="10"
+        />
+
+        <property
+            name="teacherName"
+            type="java.lang.String"
+            column="TeacherName"
+            length="20"
+        />
+
+        <property
+            name="teacherPassword"
+            type="java.lang.String"
+            column="TeacherPassword"
+            length="10"
+        />
+
+        <property
+            name="teacherSex"
+            type="java.lang.String"
+            column="TeacherSex"
+            length="2"
+        />
+
+        <property
+            name="workload"
+            type="java.lang.Float"
+            column="Workload"
+        />
+
+        <property
+            name="majorName"
+            type="java.lang.String"
+            column="MajorName"
+            length="10"
+        />
+
+        <property
+            name="teacherPhone"
+            type="java.lang.String"
+            column="TeacherPhone"
+            length="10"
+        />
+
+        <property
+            name="teacherEmail"
+            type="java.lang.String"
+            column="TeacherEmail"
+            length="10"
+        />
+
+        <!--
+            To add non XDoclet property mappings, create a file named
+                hibernate-properties-TeacherInfo.xml
+            containing the additional properties and place it in your merge dir.
+        -->
+
+    </class>
+
+</hibernate-mapping>

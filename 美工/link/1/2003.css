@@ -1,0 +1,366 @@
+html, body {
+	padding:0px;
+	margin:0px 0px 10px 0px;
+	font-family:"Trebuchet MS", Arial, sans-serif;
+	font-size:11px;
+	line-height:14px;
+	background: #FFFFFF;
+  }
+  
+a:link {color:#336699;}
+a:visited {color:#336699;}
+a:hover {color:#3399FF;} 
+a:active {color:#3399FF;} 
+
+DIV.nav a:link {text-decoration:none}
+DIV.nav a:visited {text-decoration:none}
+DIV.nav a:hover {text-decoration:none}  
+DIV.nav a:active {text-decoration:none}  
+
+table {
+  table-layout:auto;
+  border:0px;
+  padding:0px;
+  margin:0px;
+  }
+  
+td {
+	padding:0px;
+	margin:0px;
+  }
+  
+.content {
+	padding:14px;
+	line-height : 125%;
+	text-size:11px;
+}
+
+.toph {
+	font-size: 18px;
+	color: #FFFFFF;
+	vertical-align: middle;
+	font-family: "Trebuchet MS", Arial, Helvetica;
+}
+.navbig {
+	font-weight: bold;
+	font-size:11px;
+	color: #336699;
+	background-color: #EBEBEB;
+	border-top-width: 0px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-bottom-style: solid;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	height: 22px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 13px;
+	border-right-style: solid;
+}
+.navother {
+	font-weight: bold;
+	font-size:11px;
+	color: #336699;
+	background-color: #F7F7F7;
+	border-top-width: 0px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-bottom-style: solid;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	height: 22px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 13px;
+	border-right-style: solid;
+}
+.navsmall {
+	color: #336699;
+	font-size:11px;
+	background-color: #EBEBEB;
+	border-top-width: 0px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-bottom-style: solid;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	height: 22px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 30px;
+	border-right-style: solid;
+}
+.navdiv {
+	background-color: #CCCCCC;
+	height: 3px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #CCCCCC;
+}
+.navon {
+	background-color: #CCCCCC;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+}
+
+.navoff {
+	background-color: #EBEBEB;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+}
+
+.navofflt {
+	background-color: #F7F7F7;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+}
+
+.modhead {
+	background-color: #336699;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #FFFFFF;
+	margin: 0px;
+	font-weight: bold;
+	white-space: nowrap;
+	padding: 0px 0px 0px 6px;
+}
+
+.modbod {
+	padding: 10px;
+	border: 1px solid #CCCCCC;
+	line-height: 14px;
+	font-size: 11px;
+}
+.contentcat {
+	border: 1px solid #CCCCCC;
+}
+.contentcattitle {
+	font-size: 11px;
+	color: #FFFFFF;
+	background-color: #000000;
+	padding: 2px;
+	text-align: center;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+	text-decoration: none;
+}
+.navhere {
+	font-weight: bold;
+	color: #000000;
+}
+
+.searchbox {
+	font-family: "Trebuchet MS", Arial, Helvetica;
+	font-size: 10px;
+	color: #000000;
+	width: 200px;
+	margin: 0px;
+	padding: 10px;
+	line-height: 14px;
+}
+
+.footer {
+	font-size: 11px;
+	text-align: center;
+	padding: 4px;
+}
+
+.searchbutton {
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+.catspace {
+	line-height: 14px;
+}
+
+.trl {
+	color:#FFFFFF;
+	text-decoration: none;
+}
+
+.cheadbig {
+	font-family: "Trebuchet MS", Arial, Helvetica;
+	font-size: 18px;
+	color: #666666;
+	text-align: right;
+	vertical-align: top;
+	padding-right: 17px;
+	margin: 0px;
+	padding-top: 0px;
+}
+
+.cheadmenu {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	padding-right: 15px;
+	padding-left: 15px;
+	white-space: nowrap;
+	text-decoration:underline;
+}
+
+.majorheader {
+	font-size: 16px;
+	font-weight: bold;
+	width: 100%;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.kbpic {
+	border: 1px solid #336699;
+	color : #003366;
+	margin-top : 10px;
+	margin-bottom : 10 px;
+	margin-left : 24 px;
+	margin-right : 10 px;
+}
+
+.kbpic_nb {
+	margin-top : 10px;
+	margin-bottom : 10 px;
+	margin-left : 24 px;
+	margin-right : 10 px;
+}
+
+.gw {
+	font-size: 12px; 
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.minorheader {
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.blueminorheader {
+	font-size: 13px;
+}
+
+.formelements {
+	font-size: 13px;
+}
+
+.genspaced {
+	font-size: 13px;
+	line-height: 20px;
+}
+
+.gensmall {
+	font-size: 9px; 
+	font-weight: normal; 
+}
+
+.linkfaq {
+	text-decoration: none;
+	color: #003366;
+	font-weight: bold;
+font-size: 12px;
+
+}
+
+.topheader   { background: #5ea3d1 url(/images/clients/real_gam/back_generic.gif) }
+
+.pagetitle   { color: white; font-weight: normal; font-size: 14pt; vertical-align: middle; padding-left: 5px }
+
+
+.summary {
+}
+
+.navigator {
+text-align : right;
+}
+
+.detail {
+margin : 15px;
+}
+
+.list {
+margin : 30px;
+}
+
+.example {
+margin : 45px;
+}
+
+.head1 {
+	font-size: 16px;
+	font-weight: bold;
+	width: 100%;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.head2 {
+font-weight : bold;
+}
+
+.title {
+	font-size: 16px;
+	font-weight: bold;
+	width: 100%;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-family:Arial,sans-serif;
+  font-size:22px;
+  color: #fff;
+  }
+    
+h2 {
+	font-family:Arial, sans-serif;
+	font-size:14px;
+	color:#fff;
+	margin:0;
+	padding-right:2px;
+	position:relative;
+	top:2px;
+	left: 6px;
+  }
+
+h4 {
+  font-weight:bold;
+  padding:0px;
+  margin:0px;
+  }
+  
+h5 {
+  color:#ccc;
+  font-weight:normal;
+  padding:0px;
+  margin:0px;
+  }  
+
+h6 {
+  color: #ccc;
+  padding:0px;
+  margin:0px;
+  }

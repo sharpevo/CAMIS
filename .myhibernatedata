@@ -1,0 +1,20 @@
+#
+#Sun Jun 24 15:37:34 CST 2007
+genBasicCompId=false
+sessionFactoryName=org.chd.HibernateSessionFactory
+profile=
+daoSFId=
+version=3.1
+jndiPath=
+springDaoFile=
+useJavaTypes=true
+keyGenerator=native
+libInstallFolder=/WebRoot/WEB-INF/lib
+addLibs2Project=true
+genVersionTag=false
+sessionFactoryId=
+basePersistenceClass=
+reSettingsFile=/cam/hibernate.reveng.xml
+configFile=/cam/src/hibernate.cfg.xml
+createConfigFile=true
+addLibs2Classpath=true
